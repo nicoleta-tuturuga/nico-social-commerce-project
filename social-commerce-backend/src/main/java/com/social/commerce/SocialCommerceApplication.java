@@ -8,12 +8,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = "com.social.commerce.core.dao")
 @EnableConfigurationProperties({
-		FileStorageProperties.class
+        FileStorageProperties.class,
+        StaticResourceConfiguration.class
 })
 public class SocialCommerceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SocialCommerceApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(SocialCommerceApplication.class, args);
+    }
 }
