@@ -27,3 +27,6 @@ spring:
 # All files uploaded through the REST API will be stored in this directory
 file:
   upload-dir: C:/react/socialCommerceBE/images
+app:
+  enabledLocales:
+    - en
