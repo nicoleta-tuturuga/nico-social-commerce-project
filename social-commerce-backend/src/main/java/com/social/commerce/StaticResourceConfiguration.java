@@ -20,7 +20,6 @@ import java.util.Locale;
 @ConfigurationProperties(prefix = "app")
 public class StaticResourceConfiguration extends AcceptHeaderLocaleResolver implements WebMvcConfigurer {
 
-    private static final String ACCEPT_HEADER_LANGUAGE = "Accept-Language";
     private List<Locale> enabledLocales;
 
     //TODO: add to path all media folders
@@ -36,7 +35,7 @@ public class StaticResourceConfiguration extends AcceptHeaderLocaleResolver impl
 
     @Override
     public Locale resolveLocale(HttpServletRequest request) {
-        String acceptHeaderLanguageValue = request.getHeader(ACCEPT_HEADER_LANGUAGE);
+        String acceptHeaderLanguageValue = request.getHeader("Accept-Language");
         if (StringUtils.isEmpty(acceptHeaderLanguageValue)) {
             return Locale.getDefault();
         }
