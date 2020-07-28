@@ -1,17 +1,22 @@
 package com.social.commerce.core.model;
 
+import lombok.Data;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Data
 @Entity
-public class User {
+public class Dimension {
 
     @Id
     @GeneratedValue
     private long id;
 
-    private String email;
-    private String name;
+    @Column(unique = true, length = 100)
+    private String code;
 
+    private String unitOfMeasure;
 }

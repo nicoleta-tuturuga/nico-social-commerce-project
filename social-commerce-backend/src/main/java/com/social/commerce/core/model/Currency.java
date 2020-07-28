@@ -1,21 +1,20 @@
 package com.social.commerce.core.model;
 
-import javax.persistence.Column;
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Data
 @Entity
-public class Dimension {
+public class Currency {
 
     @Id
     @GeneratedValue
     private long id;
 
-    @Column(unique = true)
-    private String code;
-
-    private String unitOfMeasure;
-
-
+    private double code;
+    private String symbol;
+    private int digits;
 }

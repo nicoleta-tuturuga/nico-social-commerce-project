@@ -1,8 +1,11 @@
 package com.social.commerce.core.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
 
+@Data
 @Entity
 public class Comment {
 
@@ -17,8 +20,4 @@ public class Comment {
 
     @OneToMany
     private List<Comment> replies;
-
-
-
-
 }
