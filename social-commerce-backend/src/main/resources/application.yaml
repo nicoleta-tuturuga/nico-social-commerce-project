@@ -30,3 +30,7 @@ file:
 app:
   enabledLocales:
     - en
+  security:
+    passwordValidityTimeInDays: 60
+    tokenValidityTimeInMinutes: 60
+    secret: secret
