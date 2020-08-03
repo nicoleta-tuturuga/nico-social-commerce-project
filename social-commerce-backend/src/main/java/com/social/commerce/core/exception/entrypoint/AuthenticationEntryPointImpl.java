@@ -1,5 +1,6 @@
 package com.social.commerce.core.exception.entrypoint;
 
+import com.social.commerce.core.constants.ErrorsConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.context.support.ResourceBundleMessageSource;
@@ -23,9 +24,9 @@ public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {
     public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws IOException, ServletException {
         httpServletResponse.setContentType(MediaType.APPLICATION_JSON_VALUE);
         httpServletResponse.setStatus(HttpStatus.UNAUTHORIZED.value());
-        httpServletResponse.getWriter().print(resourceBundleMessageSource.getMessage(
-                "unauthorized.message", null, LocaleContextHolder.getLocale()));
-        ;
+        httpServletResponse.getWriter().print(String.format(ErrorsConstants.ERROR_MESSAGE_JSON_FORMAT,
+                resourceBundleMessageSource.getMessage(ErrorsConstants.UNAUTHORIZED_MESSAGE,
+                        null, LocaleContextHolder.getLocale())));
     }
 
     @Autowired

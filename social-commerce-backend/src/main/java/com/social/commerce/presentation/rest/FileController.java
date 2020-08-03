@@ -1,7 +1,7 @@
 package com.social.commerce.presentation.rest;
 
-import com.social.commerce.core.service.impl.FileStorageService;
 import com.social.commerce.core.model.UploadFileResponse;
+import com.social.commerce.core.service.impl.FileStorageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-public class FileController extends AbstractController{
+public class FileController extends AbstractController {
 
     private static final Logger logger = LoggerFactory.getLogger(FileController.class);
 

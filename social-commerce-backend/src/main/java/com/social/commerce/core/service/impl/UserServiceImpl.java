@@ -1,6 +1,7 @@
 package com.social.commerce.core.service.impl;
 
 import com.social.commerce.core.dao.UserDAO;
+import com.social.commerce.core.exception.UserNotFoundException;
 import com.social.commerce.core.model.User;
 import com.social.commerce.core.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Service
 public class UserServiceImpl implements UserService {
 
+    private static final String USER_NOT_FOUND_EXCEPTION_MESSAGE_FORMAT = "No user %s found!";
     private UserDAO userDAO;
     private PasswordEncoder passwordEncoder;
 
@@ -23,6 +25,12 @@ public class UserServiceImpl implements UserService {
         //TODO add email verification
         user.setValidated(true);
         return userDAO.save(user);
+    }
+
+    @Override
+    public User getUserByEmail(String email) {
+        return userDAO.findUserByEmail(email).orElseThrow(() -> new UserNotFoundException(
+                String.format(USER_NOT_FOUND_EXCEPTION_MESSAGE_FORMAT, email)));
     }
 
     @Autowired

@@ -33,4 +33,4 @@ app:
   security:
     passwordValidityTimeInDays: 60
     tokenValidityTimeInMinutes: 60
-    secret: secret
+    resetTokenValidityTimeInDays: 14

@@ -1,7 +1,7 @@
 package com.social.commerce.facade.converter;
 
-import com.social.commerce.facade.dto.CategoryDto;
 import com.social.commerce.core.model.Category;
+import com.social.commerce.facade.dto.CategoryDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

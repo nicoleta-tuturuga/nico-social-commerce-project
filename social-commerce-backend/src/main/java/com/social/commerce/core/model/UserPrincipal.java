@@ -2,15 +2,16 @@ package com.social.commerce.core.model;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.stream.Collectors;
 
 public class UserPrincipal implements UserDetails {
 
-    @Value("${app.security.passwordValidityTimeInDays#{60}}")
+    @Value("${app.security.passwordValidityTimeInDays:60}")
     private long passwordValidityTimeInDays;
     private User user;
 
@@ -20,8 +21,10 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        //TODO implement
-        return Collections.emptyList();
+        return user.getRoles()
+                .stream()
+                .map(role -> new SimpleGrantedAuthority(role.getRole().toString()))
+                .collect(Collectors.toList());
     }
 
     @Override

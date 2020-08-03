@@ -11,4 +11,5 @@ public class AuthenticationTokenDTO {
 
     private String accessToken;
     private long expiration;
+    private String refreshToken;
 }

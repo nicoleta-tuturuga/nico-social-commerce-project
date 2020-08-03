@@ -1,7 +1,7 @@
 package com.social.commerce.core.filter;
 
 import com.social.commerce.core.constants.SecurityConstants;
-import com.social.commerce.core.service.AuthenticationTokenService;
+import com.social.commerce.core.service.AuthenticationService;
 import com.social.commerce.core.service.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -20,8 +20,8 @@ import java.io.IOException;
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    private UserDetailsServiceImpl userDetailsService;
-    private AuthenticationTokenService authenticationTokenService;
+    private UserDetailsServiceImpl userDetailsServiceImpl;
+    private AuthenticationService authenticationService;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -30,13 +30,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         if (!StringUtils.isEmpty(token)) {
             token = token.replace(SecurityConstants.BEARER_TOKEN_PREFIX, "").trim();
 
-            if (token.length() > 0 && authenticationTokenService.validateToken(token)) {
-                UserDetails userDetails = userDetailsService
-                        .loadUserByUsername(authenticationTokenService.getSubject(token));
-
-                UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
-                        new UsernamePasswordAuthenticationToken(userDetails, userDetails.getPassword(), userDetails.getAuthorities());
-                SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+            if (token.length() > 0 && authenticationService.validateToken(token)) {
+                createTokenAuthentication(token);
             }
         }
 
@@ -44,12 +39,22 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 
     @Autowired
-    public void setUserDetailsService(UserDetailsServiceImpl userDetailsService) {
-        this.userDetailsService = userDetailsService;
+    public void setUserDetailsServiceImpl(UserDetailsServiceImpl userDetailsServiceImpl) {
+        this.userDetailsServiceImpl = userDetailsServiceImpl;
     }
 
     @Autowired
-    public void setAuthenticationTokenService(AuthenticationTokenService authenticationTokenService) {
-        this.authenticationTokenService = authenticationTokenService;
+    public void setAuthenticationService(AuthenticationService authenticationService) {
+        this.authenticationService = authenticationService;
+    }
+
+    private void createTokenAuthentication(String token) {
+        UserDetails userDetails = userDetailsServiceImpl
+                .loadUserByUsername(authenticationService.getSubject(token));
+
+        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
+                new UsernamePasswordAuthenticationToken(userDetails, userDetails.getPassword(), userDetails.getAuthorities());
+        SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+
     }
 }

@@ -1,16 +1,13 @@
 package com.social.commerce.presentation.rest;
 
-import com.social.commerce.core.service.AuthenticationTokenService;
+import com.social.commerce.core.service.AuthenticationService;
 import com.social.commerce.facade.UserFacade;
 import com.social.commerce.facade.converter.Converter;
-import com.social.commerce.facade.dto.LoginRequest;
+import com.social.commerce.facade.dto.LoginRequestDTO;
+import com.social.commerce.facade.dto.RefreshTokenRequestDTO;
 import com.social.commerce.facade.dto.UserRegisterRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,11 +22,9 @@ import java.util.Map;
 public class AuthController {
 
     private UserFacade userFacade;
-    private AuthenticationManager authenticationManager;
-    private AuthenticationTokenService authenticationTokenService;
+    private AuthenticationService authenticationService;
     private Converter<BindingResult, Map<String, String>> bindingResultMapConverter;
 
-    //TODO add @Valid
     @PostMapping("sign-up")
     private ResponseEntity<?> signUp(@Valid @RequestBody UserRegisterRequest userRegisterRequest,
                                      BindingResult bindingResult) {
@@ -42,17 +37,25 @@ public class AuthController {
     }
 
     @PostMapping
-    private ResponseEntity<?> login(@Valid @RequestBody LoginRequest loginRequest,
+    private ResponseEntity<?> login(@Valid @RequestBody LoginRequestDTO loginRequestDTO,
                                     BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return ResponseEntity.badRequest().body(bindingResultMapConverter.convert(bindingResult));
         }
 
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(loginRequest.getEmail(), loginRequest.getPassword()));
-        SecurityContextHolder.getContext().setAuthentication(authentication);
+        return ResponseEntity.ok().body(authenticationService
+                .generateAuthenticationToken(loginRequestDTO));
+    }
 
-        return ResponseEntity.ok().body(authenticationTokenService.generateAuthenticationToken(authentication));
+    @PostMapping("/refresh")
+    private ResponseEntity<?> refreshToken(@Valid @RequestBody RefreshTokenRequestDTO refreshTokenRequestDTO,
+                                           BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return ResponseEntity.badRequest().body(bindingResultMapConverter.convert(bindingResult));
+        }
+
+        return ResponseEntity.ok().body(authenticationService
+                .refreshAuthenticationToken(refreshTokenRequestDTO));
     }
 
     @Autowired
@@ -61,13 +64,8 @@ public class AuthController {
     }
 
     @Autowired
-    public void setAuthenticationManager(AuthenticationManager authenticationManager) {
-        this.authenticationManager = authenticationManager;
-    }
-
-    @Autowired
-    public void setAuthenticationTokenService(AuthenticationTokenService authenticationTokenService) {
-        this.authenticationTokenService = authenticationTokenService;
+    public void setAuthenticationService(AuthenticationService authenticationService) {
+        this.authenticationService = authenticationService;
     }
 
     @Autowired
