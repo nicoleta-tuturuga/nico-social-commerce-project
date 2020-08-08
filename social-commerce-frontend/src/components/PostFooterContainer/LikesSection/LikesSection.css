@@ -1,0 +1,4 @@
+.ButtonHover:hover{
+    cursor: pointer;
+    user-select: none;
+}

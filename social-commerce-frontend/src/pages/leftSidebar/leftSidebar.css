@@ -1,0 +1,102 @@
+/* .leftSidebar-container{
+    position: sticky;
+    z-index: 1;
+} */
+
+.content-type{
+    overflow: scroll;
+    width: 9rem;
+    height: 10rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* border-bottom: 1px solid rgb(167, 167, 167); */
+}
+.products-sizes{
+    overflow: scroll;
+    width: 9rem;
+    height: 10rem;
+    position: absolute;
+    top: 15rem;
+    left: 0.8rem;
+    /* display: flex;
+    flex-direction: column;
+    display flex se aplica aparent doar in relatie directa parinte-copil deci aici nu va merge trebuie pus la fiecare copil in parte */
+    outline: 1px solid rgb(167, 167, 167);
+}
+
+.content{
+    margin: 0 0.2rem;
+}
+
+.slidecontainer{
+    width: 100%;
+    height: 10rem;
+    position: absolute;
+    top: 26rem;
+    left: 0.8rem;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 9rem;
+    height: 0.3rem;
+    border-radius: 5px;  
+    background: black;
+    outline: none;
+    /* opacity: 0.7; */
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%; 
+    background: black;
+    cursor: pointer;
+  }
+
+.new-vintage{
+    width: 9rem;
+    height: 10rem;
+    position: absolute;
+    top: 32rem;
+    left: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.material{
+    width: 9rem;
+    height: 10rem;
+    position: absolute;
+    overflow: scroll;
+    top: 36rem;
+    left: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-colour{
+    width: 9rem;
+    height: 10rem;
+    position: absolute;
+    overflow: scroll;
+    top: 47rem;
+    left: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-local{
+    width: 9rem;
+    height: 10rem;
+    position: absolute;
+    overflow: scroll;
+    top: 58rem;
+    left: 0.8rem;
+}
+

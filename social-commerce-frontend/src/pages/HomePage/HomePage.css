@@ -1,0 +1,84 @@
+.Carousel {
+    width:200px;
+    height:100px;
+    margin: auto;
+  }
+
+
+.women {
+  background-color: #ffffff;
+  float: left;
+  color: #222222;
+  margin: 8px 5px;
+  padding: 7px 9px 5px;
+  font-size: 18px;
+  list-style-type: none;
+  display: block;
+}
+
+.men{
+  background-color: #ffffff;
+  float: left;
+  color: #222222;
+  margin: 8px 5px;
+  padding: 7px 9px 5px;
+  font-size: 18px;
+  list-style-type: none;
+  display: block;
+}
+
+.carousel__features{
+  list-style: none;
+  /* padding: 0;
+  margin: 0; */
+  display: inline-block;
+}
+
+
+
+h5{
+  color: #222222;
+}
+
+a:hover{
+  text-decoration: none;
+  color: #222222;
+  text-decoration-line: none;
+}
+
+.textDecoration:hover{
+  text-decoration-line: underline;
+}
+
+/* .gallery-container {
+  padding: .9375rem 0;
+} */
+
+*{
+  box-sizing: border-box;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* grid-gap: 1rem; */
+  /* row-gap: 8px; */
+  /* max-width: 900px;
+  width: 100%; */
+}
+
+.boutiqueImg{
+  display: block;
+  box-shadow: -1px 0px 0px rgba(0,0,0,0.06);
+  width:100%;
+}
+
+
+
+
+  @media (max-width: 900px) {
+    .carousel {
+      width:auto;
+      height:auto;
+    }
+}
