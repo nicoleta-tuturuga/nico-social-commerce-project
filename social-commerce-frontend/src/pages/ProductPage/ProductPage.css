@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+}
+
+.product-details-content-container{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 2fr 3fr 2fr;
+    
+}
+
+.product-imgs{
+    display: grid;
+    height: 430px;
+    grid-template-columns: repeat(4, minmax(3rem, 3fr));
+    grid-template-rows: 70% 1fr;
+    grid-template-areas: "header header header header"
+                        "footer footer footer footer";
+}   
+
+.large-img{
+    width: 100%;
+    height: 100%;
+    grid-area: header;
+}
+
+.product-image{
+    width: 100%;
+    height: 60%;
+    
+}
+
+.col-2{
+    display: grid;
+    grid-template-columns: 25rem;
+}
+
+.product-title{
+    margin: 0;
+    display: grid;
+}
+
+.price-and-offer{
+    display: grid;
+    margin-left: 2rem;
+    padding: 0;
+}
+
+.product-details{
+    display: grid;
+    margin-left: 2rem;
+}
+
+.details-tabs{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    border-bottom: 1px solid rgb(211, 205, 206);
+}
+
+.tab{
+    padding: 0.3rem;
+    margin: 0;
+}
+
+
+.details{
+    display: grid;
+    justify-content: start;
+    /* grid-template-columns: 25rem; */
+}
+
+/* #more{
+    display: none;
+} */
+
+.item-description{
+    text-align: start;
+}
+
+.showMoreLess{
+    width: 4rem;
+    background-color: white;
+    border: 0;
+    padding: 0;
+    font-weight: bold;
+    outline: none;
+}
+
+.item-details{
+    list-style: none;
+    text-align: start;
+    padding: 0;
+}
+
+.contact-fav{
+    display: flex;
+    /* justify-content: flex-start; */
+    margin-left: 0;
+    border-bottom: 1px solid rgb(211, 205, 206);
+}
+
+.contact{
+    padding-right: 1.5rem;
+}
+
+.select-bag{
+    border-bottom: 1px solid rgb(211, 205, 206);
+}
+
+.variant-select{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.select-size{
+    margin-right: 1rem;
+}
+
+.sizeGuide{
+    font-weight: bold;
+}
+
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+
+input { 
+    font-family: 'FontAwesome', YourFont; 
+}
+
+.input-shop-wrapper{
+    position: relative;
+}
+
+.add-to-bag{
+    margin-bottom: 1rem;
+    font-weight: bold;
+    background-color: rgb(255, 214, 101);
+    border: 0;
+    border-radius: 5%;
+    width: 11rem;
+    height: 2rem;
+}
+
+.shopping-cart-icon{
+    position: absolute; 
+    top: 5px; 
+    left: 25px;
+}
+
+.shipping-options{
+    display: grid;
+    border-bottom: 1px solid rgb(211, 205, 206);
+    margin: 1rem 0;
+}
+
+.delivery-worldwide{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1rem;
+}
+
+.more-like-this{
+    margin-bottom: 1rem;
+}
+
+.col-3{
+    display: grid;
+    grid-template-columns: 8rem;
+}
+
+
+.also-from-us-imgs{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+}
+
+.other-img-from-us{
+    height: 6rem;
+}
