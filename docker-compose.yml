@@ -23,6 +23,14 @@ services:
       SPRING_DATASOURCE_PASSWORD: Root1234!
     networks:
       - backend
+  social-commerce-frontend:
+    build: social-commerce-frontend\
+    ports: 
+      - 3000:3000
+    depends_on:
+      - social-commerce-backend
+    networks:
+      - backend
 
 networks:
   backend:

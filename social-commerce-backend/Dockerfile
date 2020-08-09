@@ -7,4 +7,4 @@ RUN mvn clean install -DskipTests=true
 FROM openjdk:11
 COPY --from=MAVEN /tmp/target/social-commerce-0.0.1-SNAPSHOT.jar social-commerce-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "social-commerce-0.0.1-SNAPSHOT.jar"]
+CMD java -jar social-commerce-0.0.1-SNAPSHOT.jar

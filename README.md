@@ -4,6 +4,7 @@ Docker images
 
 - backend
 - database
+- frontend
 
 ### How to run ###
 - Navigate in the directory where docker-compose is
