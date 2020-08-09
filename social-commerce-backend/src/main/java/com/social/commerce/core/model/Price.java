@@ -3,7 +3,6 @@ package com.social.commerce.core.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.List;
 
 
 @Data

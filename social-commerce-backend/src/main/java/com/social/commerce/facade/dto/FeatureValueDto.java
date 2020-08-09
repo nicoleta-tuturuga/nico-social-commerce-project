@@ -1,9 +1,5 @@
 package com.social.commerce.facade.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 public class FeatureValueDto {
 
     private long id;

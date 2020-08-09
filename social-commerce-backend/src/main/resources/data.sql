@@ -8,3 +8,8 @@ insert into category(id, code, label, dimensions_image_id) values (2000, 'jeans'
 insert into category(id, code, label, dimensions_image_id) values (2001, 'shirt', 'Shirt', 1002);
 insert into category(id, code, label, dimensions_image_id) values (2002, 't-shirt', 'T-Shirt', 1003);
 
+insert into authentication_client(client_id, secret) values ('social-commerce-web', '123456');
+
+insert into role(role) values('BUYER') ,
+                             ('SELLER'),
+                             ('ADMIN');
