@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 2rem;
+}
+
+.loginForm{
+    background-color: rgb(238, 236, 255);
+}
+
+.sign-title{
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 3rem;
+}
+
+.signButton{
+    margin: 0 3rem;
+    background-color: rgb(73, 71, 71);
+    color: white;
+    border-radius: 10%;
+    border: 0;
+    padding: 0.2rem 0.6rem;
+    font-size:0.7rem;
+    /* box-shadow: 10px red; */
+}
+
+.forgot-password{
+    margin: 0 3rem;
+    color: rgb(107, 107, 107);
+    text-decoration-line: underline;
+    font-size:0.7rem;
+}
+
+.forgot-password:hover{
+    color: rgb(107, 107, 107);
+}
+
+label{
+    color: rgb(107, 107, 107);
+    /* margin bottom not working here */
+    margin-bottom: 0; 
+    font-size: 0.9rem; 
+}
+
+.signup-form{
+    /* margin-bottom: 2rem; */
+}
+
+.gender-radio-list{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.checkbox-marketing-field{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+}
+
+.marketing-newsletter{
+    appearance: checkbox;
+}
+
+.signup-terms{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.signup-button{
+    height: 1.5rem;
+    width: 4rem;
+    margin-right: 0;
+}
+
+.terms-of-service{
+    text-align: start;
+    margin-left: 0.5rem;
+    margin-right: 3rem;
+    font-size:0.7rem;
+}
+
+.terms{
+    margin-left: 0.2rem;
+}

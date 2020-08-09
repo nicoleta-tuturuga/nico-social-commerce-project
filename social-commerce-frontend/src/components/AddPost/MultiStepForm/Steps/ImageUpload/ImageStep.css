@@ -1,0 +1,46 @@
+.uploadedImg {
+    width: 150px;
+    /* height: 200px; */
+    display: inline-block
+}
+
+.gallery-container {
+    padding: .9375rem 0;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto
+  }
+
+  .btn-cloud {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+
+    width: 150px;
+    height: 150px;
+  }
+  
+ input[type=file] {
+display:none;
+  }
+
+.img-wrap {
+    position: relative;
+}
+.img-wrap .close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 100;
+    cursor: pointer
+}

@@ -1,0 +1,58 @@
+a{
+    color:#47649F;
+}
+
+body{
+    font-family:'helvetica';    
+}
+
+.card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.mediaLeft{
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.profilePhoto{
+    border: 2px solid #DDD;
+    border-radius: 50%;
+}
+
+.postImage {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 5px;
+}
+
+.post-footer-option{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.post-footer-comment-wrapper{
+    background-color: #F6F7F8;
+}
+
+.post-footer-option{
+    color: #AFB4BD;
+}
+
+.anchor-username h4{
+    font-weight: bold;
+}
+
+.anchor-time{
+    color:#ADB2BB;
+    font-size:1.2rem;
+}
+
+
+
