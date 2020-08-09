@@ -1,9 +1,10 @@
 package com.social.commerce.core.exception.handler;
 
-import com.social.commerce.core.constants.ErrorsConstants;
+import com.social.commerce.core.exception.AuthenticationTokenExpiredException;
 import com.social.commerce.core.exception.InternationalizedException;
 import com.social.commerce.core.exception.InvalidClientDetailsException;
 import com.social.commerce.core.exception.InvalidRefreshTokenException;
+import com.social.commerce.facade.dto.ErrorMessageDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.http.HttpStatus;
@@ -18,15 +19,22 @@ public class RestExceptionHandler {
 
     private MessageSource messageSource;
 
-    @ExceptionHandler({InvalidClientDetailsException.class, InvalidRefreshTokenException.class})
-    public ResponseEntity<String> handleInvalidClientDetailsException(InternationalizedException e, Locale locale) {
-        return getErrorAsJson(HttpStatus.UNAUTHORIZED, e, locale);
+    @ExceptionHandler({AuthenticationTokenExpiredException.class})
+    public ResponseEntity<ErrorMessageDTO> handleAuthenticationTokenExpiredException(AuthenticationTokenExpiredException e,
+                                                                                     Locale locale) {
+        return getErrorResponseEntity(HttpStatus.UNAUTHORIZED, "auth.token.expired", e, locale);
     }
 
+    @ExceptionHandler({InvalidClientDetailsException.class, InvalidRefreshTokenException.class})
+    public ResponseEntity<ErrorMessageDTO> handleInvalidClientDetailsException(InternationalizedException e,
+                                                                               Locale locale) {
+        return getErrorResponseEntity(HttpStatus.UNAUTHORIZED, "unauthorized", e, locale);
+    }
 
     @ExceptionHandler({InternationalizedException.class})
-    public ResponseEntity<String> handleInternationalizedExceptions(InternationalizedException e, Locale locale) {
-        return getErrorAsJson(HttpStatus.BAD_REQUEST, e, locale);
+    public ResponseEntity<ErrorMessageDTO> handleInternationalizedExceptions(InternationalizedException e,
+                                                                             Locale locale) {
+        return getErrorResponseEntity(HttpStatus.BAD_REQUEST, "bad.request", e, locale);
     }
 
     @Autowired
@@ -34,10 +42,9 @@ public class RestExceptionHandler {
         this.messageSource = messageSource;
     }
 
-    private ResponseEntity<String> getErrorAsJson(HttpStatus httpStatus, InternationalizedException e,
-                                                  Locale locale) {
-        return ResponseEntity.status(httpStatus)
-                .body(String.format(ErrorsConstants.ERROR_MESSAGE_JSON_FORMAT,
-                        messageSource.getMessage(e.getErrorCode(), e.getArgs(), locale)));
+    private ResponseEntity<ErrorMessageDTO> getErrorResponseEntity(HttpStatus httpStatus, String errorTitle,
+                                                                   InternationalizedException e, Locale locale) {
+        return ResponseEntity.status(httpStatus).body(new ErrorMessageDTO(errorTitle,
+                messageSource.getMessage(e.getErrorCode(), e.getArgs(), locale)));
     }
 }

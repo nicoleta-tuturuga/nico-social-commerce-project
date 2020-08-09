@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"clientId", "token", "userId"}))
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"clientId", "token"}))
 public class AuthenticationRefreshToken {
 
     @Id

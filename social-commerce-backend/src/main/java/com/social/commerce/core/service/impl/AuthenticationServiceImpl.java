@@ -2,6 +2,7 @@ package com.social.commerce.core.service.impl;
 
 import com.social.commerce.core.constants.ErrorsConstants;
 import com.social.commerce.core.exception.InvalidRefreshTokenException;
+import com.social.commerce.core.exception.AuthenticationTokenExpiredException;
 import com.social.commerce.core.model.AuthenticationRefreshToken;
 import com.social.commerce.core.model.User;
 import com.social.commerce.core.service.AuthenticationClientService;
@@ -64,8 +65,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
             Jwts.parser().setSigningKey(secret.getBytes(StandardCharsets.UTF_8)).parseClaimsJws(token);
             return false;
         } catch (ExpiredJwtException e) {
-            //TODO add support to send expiration message
-            return false;
+            throw new AuthenticationTokenExpiredException();
         } catch (UnsupportedJwtException | MalformedJwtException
                 | SignatureException | IllegalArgumentException e) {
             LOGGER.error("Invalid token!", e);

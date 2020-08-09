@@ -31,7 +31,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             token = token.replace(SecurityConstants.BEARER_TOKEN_PREFIX, "").trim();
 
             if (token.length() > 0 && authenticationService.validateToken(token)) {
-                createTokenAuthentication(token);
+                setAuthenticationOnSecurityContext(token);
             }
         }
 
@@ -48,7 +48,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         this.authenticationService = authenticationService;
     }
 
-    private void createTokenAuthentication(String token) {
+    private void setAuthenticationOnSecurityContext(String token) {
         UserDetails userDetails = userDetailsServiceImpl
                 .loadUserByUsername(authenticationService.getSubject(token));
 
