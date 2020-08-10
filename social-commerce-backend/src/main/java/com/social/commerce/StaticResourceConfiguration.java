@@ -1,5 +1,6 @@
 package com.social.commerce;
 
+import com.social.commerce.core.constants.AppConstants;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,6 +11,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import org.springframework.web.servlet.resource.PathResourceResolver;
+import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.templatemode.TemplateMode;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -48,10 +51,21 @@ public class StaticResourceConfiguration extends AcceptHeaderLocaleResolver impl
     public ResourceBundleMessageSource messageSource() {
         ResourceBundleMessageSource resourceBundleMessageSource = new ResourceBundleMessageSource();
         resourceBundleMessageSource.setBasename("messages");
-        resourceBundleMessageSource.setDefaultEncoding("UTF-8");
+        resourceBundleMessageSource.setDefaultEncoding(AppConstants.DEFAULT_ENCODING);
         resourceBundleMessageSource.setUseCodeAsDefaultMessage(true);
 
         return resourceBundleMessageSource;
+    }
+
+    @Bean
+    public SpringResourceTemplateResolver thymeleafTemplateResolver() {
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        templateResolver.setPrefix("classpath:" + AppConstants.EMAILS_TEMPLATES_PATH);
+        templateResolver.setSuffix(".html");
+        templateResolver.setTemplateMode(TemplateMode.HTML);
+        templateResolver.setCharacterEncoding(AppConstants.DEFAULT_ENCODING);
+
+        return templateResolver;
     }
 
     public void setEnabledLocales(List<Locale> enabledLocales) {

@@ -10,6 +10,17 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: create
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: 'tuturugan@gmail.com'
+    password: 'TrimiteMaiMulteMailuri!'
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
   ## MULTIPART (MultipartProperties)
   # Enable multipart uploads
