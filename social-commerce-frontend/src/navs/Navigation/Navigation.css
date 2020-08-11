@@ -1,79 +1,52 @@
-.navbar-brand{
-    color: #222222;
+.navigation-container button {
+  background-color: transparent;
+  border: none;
+  outline: none !important;
+  padding: 0.7rem 1rem;
 }
 
-.nav-link{
-    color: #222222;
+.navigation-container a {
+  text-decoration: none;
 }
 
-.active{
-    border-bottom: 5px solid pink;
-}
-/* .dropdown:hover .dropdown-menu {
-    
+.navigation-container {
+  padding-bottom: 3rem;
 }
 
-.nav{
-    display: flex;
-    list-style: none;
+.settings-menu {
+  list-style-type: none;
+  width: 95vw;
+  margin-bottom: 0;
 }
 
-.Brand{
-    background-color: red;
+.settings-menu button {
+  font-size: 1rem;
 }
 
-.navBrandLogo{
-    width: 50px;
-    height: 50px;
-    margin: 0;
+.brand {
+  font-size: 3rem;
 }
 
-.settings_menu{
-  text-align: end;
-  margin-top: 15px;
-  margin-right:30px;
-  margin-bottom: 5px;
-
+#navbarMenu {
+  padding-top: 1rem;
 }
 
-.settings_menu_bar{
-    display: inline;
-    text-align: right;
-    font-size: 13px;
+#navbarMenu button {
+  font-size: 1.1rem;
 }
 
-.topBar_sections{
-    margin: 0;
-    padding: 0;
-    margin-right: 0;
-    display: inline;
-    justify-content: space-around;
-} */
-
-/* @media (min-width: 567px) { */
-    /* .navbar-brand-logo
-    {
-        position: absolute;
-        top: 5px;
-        left: 50%;
-        transform: translateX(-50%);
-    } */
-    /* .navbar {
-        min-height: 90px;
-    } */
-/* }   */
-
-/* .topBar_sections_options{
-    list-style-type: none;
-    display: inline;
-    margin: 30px;
-    font-size: 20px;
+#navbarMenu button:hover {
+  color: rgb(182, 178, 178);
 }
 
-.topBar_sections_options-active {
-    border-bottom: 5px solid pink;
+.navbar-nav {
+  width: 95vw;
 }
 
-.form-inline{
-    text-align: end;
-} */
+.white-border {
+  border-bottom: 3px solid #ffffff;
+}
+
+.is-active {
+  border-bottom: 3px solid rgb(250, 78, 78);
+}
