@@ -11,6 +11,7 @@ const Navigation = () => {
     <div className="navigation-container">
 
       <header className="header-global">
+
         <ul className="settings-menu d-flex row justify-content-between">
           <div className="list-services d-flex">
             <li className="settings-menu-bar">
@@ -20,6 +21,7 @@ const Navigation = () => {
               <button>Newsletter</button>
             </li>
           </div>
+
           <div className="session-menu d-flex">
             <li>
               <Link to="/logIn">
@@ -34,12 +36,14 @@ const Navigation = () => {
             </li>
           </div>
         </ul>
+
         <nav className="navbar navbar-expand-sm flex-column align-items-strech" style={{ backgroundColor: '#ffffff' }}>
           <button className="brand mx-sm-auto">INN FASHION</button>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse w-100" id="navbarMenu">
+
+          <div className="collapse navbar-collapse w-100" id="navbar-menu">
             <div>
               <ul className="navbar-nav">
                 <NavLink exact={true} activeClassName='is-active' className="white-border" to="/">
@@ -61,10 +65,11 @@ const Navigation = () => {
                 <li className="nav-item ml-auto">
                   <form className="form-inline my-2 my-lg-0">
                     <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button className="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
                   </form>
                 </li>
               </ul>
+
               <ul className="navbar-nav">
                 <NavLink activeClassName='is-active' className="white-border" to="/newsfeed">
                   <li className="nav-item">

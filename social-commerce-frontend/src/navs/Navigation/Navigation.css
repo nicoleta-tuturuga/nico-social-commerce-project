@@ -5,10 +5,6 @@
   padding: 0.7rem 1rem;
 }
 
-.navigation-container a {
-  text-decoration: none;
-}
-
 .navigation-container {
   padding-bottom: 3rem;
 }
@@ -27,15 +23,15 @@
   font-size: 3rem;
 }
 
-#navbarMenu {
+#navbar-menu {
   padding-top: 1rem;
 }
 
-#navbarMenu button {
+#navbar-menu button {
   font-size: 1.1rem;
 }
 
-#navbarMenu button:hover {
+#navbar-menu button:hover {
   color: rgb(182, 178, 178);
 }
 
