@@ -1,5 +1,6 @@
 package com.social.commerce.facade.dto;
 
+import com.social.commerce.core.constants.ErrorsConstants;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 public class RefreshTokenRequestDTO {
 
-    @NotBlank
+    @NotBlank(message = ErrorsConstants.ERROR_BLANK_FIELD_ERROR_CODE)
     private String refreshToken;
 
     @NotNull

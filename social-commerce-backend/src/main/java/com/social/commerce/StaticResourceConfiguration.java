@@ -15,6 +15,7 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
 import javax.servlet.http.HttpServletRequest;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Locale;
 
@@ -51,7 +52,7 @@ public class StaticResourceConfiguration extends AcceptHeaderLocaleResolver impl
     public ResourceBundleMessageSource messageSource() {
         ResourceBundleMessageSource resourceBundleMessageSource = new ResourceBundleMessageSource();
         resourceBundleMessageSource.setBasename("messages");
-        resourceBundleMessageSource.setDefaultEncoding(AppConstants.DEFAULT_ENCODING);
+        resourceBundleMessageSource.setDefaultEncoding(StandardCharsets.UTF_8.name());
         resourceBundleMessageSource.setUseCodeAsDefaultMessage(true);
 
         return resourceBundleMessageSource;
@@ -63,7 +64,7 @@ public class StaticResourceConfiguration extends AcceptHeaderLocaleResolver impl
         templateResolver.setPrefix("classpath:" + AppConstants.EMAILS_TEMPLATES_PATH);
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
-        templateResolver.setCharacterEncoding(AppConstants.DEFAULT_ENCODING);
+        templateResolver.setCharacterEncoding(StandardCharsets.UTF_8.name());
 
         return templateResolver;
     }

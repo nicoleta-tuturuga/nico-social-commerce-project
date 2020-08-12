@@ -29,6 +29,9 @@ public class User {
     @Column
     private LocalDateTime lastPasswordUpdate;
 
+    @Column
+    private String phoneNumber;
+
     @ManyToMany
     @JoinTable(name = "user_role", joinColumns = {@JoinColumn(name = "userId")},
             inverseJoinColumns = {@JoinColumn(name = "roleId")})

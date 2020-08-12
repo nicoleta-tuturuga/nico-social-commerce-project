@@ -12,7 +12,8 @@ public interface UserConverter {
     @Mappings({
             @Mapping(target = "email", source = "userRegisterRequest.email"),
             @Mapping(target = "name", source = "userRegisterRequest.name"),
-            @Mapping(target = "password", source = "userRegisterRequest.password")
+            @Mapping(target = "password", source = "userRegisterRequest.password"),
+            @Mapping(target = "phoneNumber", source = "userRegisterRequest.phoneNumber")
     })
     User userRegisterRequestDtoToUser(UserRegisterRequest userRegisterRequest);
 }
