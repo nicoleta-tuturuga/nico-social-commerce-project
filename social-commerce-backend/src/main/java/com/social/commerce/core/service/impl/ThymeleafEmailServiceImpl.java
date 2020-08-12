@@ -14,6 +14,7 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import java.nio.charset.StandardCharsets;
 
 @Service
 public class ThymeleafEmailServiceImpl implements EmailService {
@@ -36,7 +37,7 @@ public class ThymeleafEmailServiceImpl implements EmailService {
 
     private void sendHtmlMessage(String to, String subject, String htmlBody) throws MessagingException {
         MimeMessage message = javaMailSender.createMimeMessage();
-        MimeMessageHelper helper = new MimeMessageHelper(message, true, AppConstants.DEFAULT_ENCODING);
+        MimeMessageHelper helper = new MimeMessageHelper(message, true, StandardCharsets.UTF_8.name());
         helper.setTo(to);
         helper.setSubject(subject);
         helper.setText(htmlBody, true);

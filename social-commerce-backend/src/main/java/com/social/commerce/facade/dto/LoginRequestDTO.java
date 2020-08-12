@@ -7,14 +7,16 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import static com.social.commerce.core.constants.ErrorsConstants.ERROR_BLANK_FIELD_ERROR_CODE;
+
 @Getter
 @Setter
 public class LoginRequestDTO {
 
-    @NotBlank
+    @NotBlank(message = ERROR_BLANK_FIELD_ERROR_CODE)
     private String email;
 
-    @NotBlank
+    @NotBlank(message = ERROR_BLANK_FIELD_ERROR_CODE)
     private String password;
 
     @NotNull
