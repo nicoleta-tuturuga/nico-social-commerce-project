@@ -1,84 +1,87 @@
-.Carousel {
-    width:200px;
-    height:100px;
-    margin: auto;
-  }
+.carousel-container {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
 
+.carousel-container img {
+  height: 60rem;
+}
 
-.women {
+.carousel-motto {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.women, .men {
   background-color: #ffffff;
-  float: left;
   color: #222222;
-  margin: 8px 5px;
-  padding: 7px 9px 5px;
-  font-size: 18px;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
   list-style-type: none;
-  display: block;
+  border: none;
+  outline: none;
 }
 
-.men{
-  background-color: #ffffff;
-  float: left;
-  color: #222222;
-  margin: 8px 5px;
-  padding: 7px 9px 5px;
-  font-size: 18px;
-  list-style-type: none;
-  display: block;
+.boutiques-container {
+  margin-bottom: 5rem;
 }
 
-.carousel__features{
-  list-style: none;
-  /* padding: 0;
-  margin: 0; */
-  display: inline-block;
+.boutiques-content {
+  margin-bottom: 1.5rem;
 }
 
-
-
-h5{
+.boutiques-content h5 {
   color: #222222;
 }
 
-a:hover{
+.boutiques-content .angle-icon {
+  color: #222222;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.go-to-all-shops-page {
+  margin-top: 1rem;
+}
+
+.go-to-all-shops-page:hover {
+  text-decoration-line: underline;
+  color: #222222;
+}
+
+.home-gallery-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.home-gallery-card-item {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: #222222;
+}
+
+.home-gallery-card-item:hover {
   text-decoration: none;
   color: #222222;
-  text-decoration-line: none;
 }
 
-.textDecoration:hover{
-  text-decoration-line: underline;
+.home-gallery-card-item p {
+  background-color: rgb(243, 232, 234);
+  margin: 0;
+  padding: 1.5rem;
 }
 
-/* .gallery-container {
-  padding: .9375rem 0;
-} */
-
-*{
-  box-sizing: border-box;
+.boutiqueImg {
+  width: 100%;
+  box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.06);
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  /* grid-gap: 1rem; */
-  /* row-gap: 8px; */
-  /* max-width: 900px;
-  width: 100%; */
-}
-
-.boutiqueImg{
-  display: block;
-  box-shadow: -1px 0px 0px rgba(0,0,0,0.06);
-  width:100%;
-}
-
-
-
-
-  @media (max-width: 900px) {
-    .carousel {
-      width:auto;
-      height:auto;
-    }
+@media (max-width: 900px) {
+  .carousel {
+    width: auto;
+    height: auto;
+  }
 }
