@@ -1,0 +1,33 @@
+[
+  {
+    "id": "1",
+    "name": "Vintage Stories Ro",
+    "imgPath": "https://images.unsplash.com/photo-1560849735-881abdac6a3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "2",
+    "name": "Retro Vintages",
+    "imgPath": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  
+  {
+    "id": "3",
+    "name": "Vintage Retro Fever",
+    "imgPath": "https://images.unsplash.com/photo-1560849735-881abdac6a3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "4",
+    "name": "Snobbish Society",
+    "imgPath": "https://images.unsplash.com/photo-1560849735-881abdac6a3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "5",
+    "name": "Sustain Planet Boutique",
+    "imgPath": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "6",
+    "name": "Hunting Vintage",
+    "imgPath": "https://images.unsplash.com/photo-1560849735-881abdac6a3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  }
+]
