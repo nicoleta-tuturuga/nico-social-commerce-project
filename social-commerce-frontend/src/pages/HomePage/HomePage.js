@@ -38,7 +38,7 @@ class HomePage extends React.Component {
         <div key={data.id}>
           <Link to={`/productPage/${data.id}`} className="home-gallery-card-item">
             <p>{data.name}</p>
-            <img className="boutiqueImg" src={data.imgPath} />
+            <img className="boutique-img" src={data.imgPath} />
           </Link>
         </div>
       )
