@@ -45,11 +45,13 @@ class App extends Component {
     
   <div className="row">
 
-  <div className="col-md-2  center">
-      <h3>Left column</h3>
+{/* comment tempoarely the left column */}
+  <div className="col-md-1  center">
+      {/* <h3>Left column</h3> */}
 
   </div> 
-    <div className="col-md-9 center">
+
+    <div className="col-md-10 center">
     <Switch>
             <Route path="/" component={HomePage} exact />
             <Route path="/about" component={About} />

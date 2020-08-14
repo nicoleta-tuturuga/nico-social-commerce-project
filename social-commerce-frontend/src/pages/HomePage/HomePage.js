@@ -46,8 +46,7 @@ class HomePage extends React.Component {
 
     return (
       <div>
-        <h1>Welcome to INN fashion</h1>
-
+        
         <div className="carousel-container">
           <Carousel
             activeIndex={index}
