@@ -26,7 +26,7 @@ class dimensionsStep extends Component {
                     <div className="col-md-6">
                         <img 
                         alt=""
-                        src={ require('../../../../../assets/images/proressBar/dimensions.png') } 
+                        src='/assets/images/progressBar/dimensions.png'
                         className="dimensionsImg"
                         />
                     </div>
