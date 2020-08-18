@@ -40,14 +40,17 @@ class CarouselComponent extends React.Component {
           <Carousel.Caption>
             <h3>{item.title}</h3>
             <p className="carousel-motto">{item.motto}</p>
-            <div>
-              <button className="women">
-                {item.womenBtn} <FontAwesomeIcon icon="angle-right"></FontAwesomeIcon>
-              </button>
-              <button className="men">
-                {item.menBtn} <FontAwesomeIcon icon="angle-right"></FontAwesomeIcon>
-              </button>
-            </div>
+            {item.womenBtn && item.motto ?
+              <div>
+                <button className="women">
+                  {item.womenBtn} <FontAwesomeIcon icon="angle-right"></FontAwesomeIcon>
+                </button>
+                <button className="men">
+                  {item.menBtn} <FontAwesomeIcon icon="angle-right"></FontAwesomeIcon>
+                </button>
+              </div>
+              : null
+            }
           </Carousel.Caption>
         </Carousel.Item>
       )
