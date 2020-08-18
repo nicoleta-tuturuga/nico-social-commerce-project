@@ -40,7 +40,7 @@ class StepProgressBar extends React.Component {
                 alt=""
                 style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
                 width="40"
-                src={ require('../../../assets/images/proressBar/dimensions.png') }
+                src='/assets/images/progressBar/dimensions.png'
               />
             )}
           </Step>

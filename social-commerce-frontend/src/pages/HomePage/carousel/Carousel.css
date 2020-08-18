@@ -1,0 +1,13 @@
+.carousel-container {
+  margin: 0 5rem 5rem 5rem;
+
+}
+
+.carousel-container img {
+  height: 60rem;
+}
+
+.carousel-motto {
+  font-size: 1.5rem;
+  font-weight: 600;
+}

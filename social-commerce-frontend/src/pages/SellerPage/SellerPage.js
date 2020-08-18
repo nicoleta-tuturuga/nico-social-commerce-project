@@ -16,7 +16,7 @@ const sellerPage = () => {
                     <div className="header-image-container">
                         <img
                         className="boutique-image"
-                        src={ require('../../assets/images/homepage/4.jpeg')}
+                        src='/assets/images/homepage/4.jpeg'
                         alt="seller's image"
                         />
                     </div>
