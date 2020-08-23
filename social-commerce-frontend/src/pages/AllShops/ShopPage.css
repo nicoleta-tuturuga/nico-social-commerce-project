@@ -1,106 +1,27 @@
-.allShops{
-    margin-bottom: 1.6rem;
+.shop {
+  width: 30%;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.all-promotedShops{
-    margin-bottom: 1.6rem;
+.boutique-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  opacity: 0;
+  transition: .3s;
 }
 
-.boutiqueDescriptiononHover{
-    width: 100%;
-    position: relative;
-    transition: 0.3s;
-    /* display: inline-block;
-    background-size: cover;
-    position: relative;
-    overflow: hidden; */
+.boutique-description-hover:hover .boutique-description {
+  opacity: 1;
 }
 
-.boutiqueDescriptiononHover:hover{
-    filter: brightness(60%);
+.all-shops {
+  margin-bottom: 1.6rem;
 }
-
-.boutiqueDescription{
-    position: absolute;
-    top: 50%;
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    width: 100%;
-    opacity: 0;
-    transition: .3s
-}
-
-.boutiqueDescription:hover{
-    color: #fff;
-    text-decoration: none;
-}
-
-.boutiqueDescriptiononHover:hover .boutiqueDescription{
-    opacity: 1;
-}
-
-/* .boutiqueDescriptionHover:hover :not(.boutiqueImg){
-    opacity: 1;
-} */
-
-/* .boutiqueDescriptiononHover:before,
-.boutiqueDescriptiononHover:after{
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    content: '';
-    position: absolute;
-    top: 0;
-    background: inherit;
-    transition: .4s;
-}
-
-.boutiqueDescriptiononHover:after{
-    display: flex;
-    align-items: flex-start;
-    color: #fff;
-    font-size: 0.9rem;
-    background: black;
-    opacity: 0.6;
-    transform: translateY(100%);
-    content: attr(data-text);
-}
-
-.boutiqueDescriptiononHover:hover:before{
-    transform: translateY(-50%)
-}
-
-.boutiqueDescriptiononHover:hover:after{
-    transform: translateY(0);
-    height: 500px;
-} */
-
-.boutiqueName{
-    color: black;
-    font-size: 0.95rem;
-    font-weight: bold;
-}
-
-.boutiqueName:hover{
-    color: black;
-}
-
-/* .promoted-ancestor{
-    position: relative;
-} */
-
-.promoted-boutiques{
-    position: absolute;
-    z-index: 2;
-    top: 88%;
-    background: black;
-    opacity: 0.7;
-    color: #fff;
-    padding: 0.5rem;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
-

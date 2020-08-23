@@ -1,33 +1,36 @@
 import React from 'react';
 
-import classes from './ShopPage.css';
+import data from './data/promoted-shops-data.json';
+import { Link } from 'react-router-dom';
+
+import './PromotedShopPage.css';
+import './commonShopsStyle.css';
 
 const promotedShopPage = () => {
 
-    return(
-        <div>
-            <div className="all-promotedShops">
-                <div className="boutiqueDescriptiononHover">
-                    <a href="#">
-                        <img className="boutiqueImg" 
-                        src="boutiqueImg" src="https://images.unsplash.com/photo-1501870190084-cdf29f15ef87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"/>
-                    </a> 
-                    <div className="promoted-ancestor">
-                        <span className="promoted-boutiques">PROMOTED</span>
-                    </div>
-                 </div>
+  const promotedShops = data.map((promotedShopData) => {
+    return (
+      <div className="promoted-shops">
+        <Link to="/sellerPage" className="shop-container">
+          <div className="boutique-description-hover">
+            <img className="boutique-img"
+              src={promotedShopData.imgPath} />
+            <span className="promoted-boutiques">PROMOTED</span>
+          </div>
 
-                <div>
-                    <a href="#" className="boutiqueName"> 
-                        Nume Magazin
-                    </a>
-                    
-                </div>
-                
-                
-            </div>
-        </div>
-    );
+          <p className="boutique-name promoted-boutique-name">
+            {promotedShopData.name}
+          </p>
+        </Link>
+      </div>
+    )
+  })
+
+  return (
+    <div className="all-shops d-flex flex-wrap justify-content-between">
+      {promotedShops}
+    </div>
+  );
 };
 
 export default promotedShopPage;

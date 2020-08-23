@@ -1,0 +1,29 @@
+.shop-container:hover {
+  text-decoration: none;
+}
+
+.boutique-img {
+  width: 100%;
+}
+
+.boutique-description-hover {
+  position: relative;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.boutique-description-hover:hover {
+  filter: brightness(60%);
+}
+
+.boutique-name {
+  color: black;
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.boutique-name:hover {
+  color: black;
+  text-decoration: none;
+}

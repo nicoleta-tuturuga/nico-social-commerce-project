@@ -1,49 +1,24 @@
-.shops-header{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.shops-header {
+  margin-top: 3rem;
 }
 
-.shops-header-link{
-    color: black;
-}
-.shops-header-link:hover{
-    color: black;
+.refine-shop-category {
+  list-style-type: none;
+  margin: 0 0.7rem;
 }
 
-.here{
-    font-weight: bold;
-    text-decoration-line: underline;
+.refine-shop-user-preferences {
+  list-style-type: none;
 }
 
-.allshops-subLinks{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
+.refine-preference {
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-#refine-tabs{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
+.shops-top-details {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
 }
-.refine-shop{
-    margin: 0 0.7rem;
-}
-
-.refine-preference{
-    margin: 0 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.allshops-wraper{
-    display: grid;
-    grid-template-columns: 20%  1fr;
-    margin: 2rem 0;
-}
-
-.promoted-shops{
-    margin: 1rem 0;
-}
-

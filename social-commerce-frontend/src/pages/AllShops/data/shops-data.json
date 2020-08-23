@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "name": "Vintage Stories Ro",
+    "description": "For the love of fashion and vinatge clothes",
+    "imgPath": "https://images.unsplash.com/photo-1560849735-881abdac6a3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "2",
+    "name": "Retro Vintages",
+    "description": "In order to sustain this beautiful.",
+    "imgPath": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+
+  {
+    "id": "3",
+    "name": "Vintage Retro Fever",
+    "description": "Vintage accessories",
+    "imgPath": "https://images.unsplash.com/photo-1560849735-881abdac6a3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "4",
+    "name": "Snobbish Society",
+    "description": "Luxury vintage clothes",
+    "imgPath": "https://images.unsplash.com/photo-1560849735-881abdac6a3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "5",
+    "name": "Sustain Planet Boutique",
+    "description": "Sustain our planet, buy from us",
+    "imgPath": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "6",
+    "name": "Hunting Vintage",
+    "description": "Hunt the most amazing vintages",
+    "imgPath": "https://images.unsplash.com/photo-1560849735-881abdac6a3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "7",
+    "name": "Snobbish Society",
+    "description": "Hunt the most snobbish vintages",
+    "imgPath": "https://images.unsplash.com/photo-1560849735-881abdac6a3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "8",
+    "name": "Sustain Planet Boutique",
+    "description": "Sustain our planet, buy from us",
+    "imgPath": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  },
+  {
+    "id": "9",
+    "name": "Hunting Vintage",
+    "description": "Hunt the most amazing vintages",
+    "imgPath": "https://images.unsplash.com/photo-1560849735-881abdac6a3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+  }
+] 

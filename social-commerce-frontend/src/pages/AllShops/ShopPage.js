@@ -1,33 +1,38 @@
 import React from 'react';
 
-import classes from './ShopPage.css';
+import data from './data/shops-data.json';
+import { Link } from 'react-router-dom';
+
+import './ShopPage.css';
+import './commonShopsStyle.css';
 
 const shopPage = () => {
 
-    return(
-        <div>
-            <div className="allShops">
-                <div className="boutiqueDescriptiononHover">
-                    <a href="#">
-                        <img className="boutiqueImg" 
-                        src="boutiqueImg" src="https://images.unsplash.com/photo-1501870190084-cdf29f15ef87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"/>
-                    </a> 
-                    <a href="#" className="boutiqueDescription">
-                        Some description here...
-                    </a>
-                 </div>
+  const shopsData = data.map((shopData) => {
+    return (
+      <div className="shop" key={shopData.id}>
+        <Link to="/sellerPage" className="shop-container">
+          <div className="boutique-description-hover">
+            <img className="boutique-img"
+              src={shopData.imgPath} />
+            <p className="boutique-description">
+              {shopData.description}
+            </p>
+          </div>
 
-                <div>
-                    <a href="#" className="boutiqueName"> 
-                        Nume Magazin
-                    </a>
-                    
-                </div>
-                
-                
-            </div>
-        </div>
-    );
+          <p className="boutique-name">
+            {shopData.name}
+          </p>
+        </Link>
+      </div>
+    )
+  })
+
+  return (
+    <div className="all-shops d-flex flex-wrap justify-content-between">
+      {shopsData}
+    </div>
+  );
 };
 
 export default shopPage;
