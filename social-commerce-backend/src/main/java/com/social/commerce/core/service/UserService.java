@@ -7,4 +7,10 @@ public interface UserService {
     User addUser(User user);
 
     User getUserByEmail(String email);
+
+    boolean isUserPresent(String email);
+
+    void changePassword(String tokenValue, String newPassword);
+
+    void confirmAccount(String tokenValue);
 }

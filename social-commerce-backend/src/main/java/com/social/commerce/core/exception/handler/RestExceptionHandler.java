@@ -1,5 +1,6 @@
 package com.social.commerce.core.exception.handler;
 
+import com.social.commerce.core.constants.ErrorsConstants;
 import com.social.commerce.core.exception.AuthenticationTokenExpiredException;
 import com.social.commerce.core.exception.InternationalizedException;
 import com.social.commerce.core.exception.InvalidClientDetailsException;
@@ -34,7 +35,7 @@ public class RestExceptionHandler {
     @ExceptionHandler({InternationalizedException.class})
     public ResponseEntity<ErrorMessageDTO> handleInternationalizedExceptions(InternationalizedException e,
                                                                              Locale locale) {
-        return getErrorResponseEntity(HttpStatus.BAD_REQUEST, "bad.request", e, locale);
+        return getErrorResponseEntity(HttpStatus.BAD_REQUEST, ErrorsConstants.BAD_REQUEST, e, locale);
     }
 
     @Autowired

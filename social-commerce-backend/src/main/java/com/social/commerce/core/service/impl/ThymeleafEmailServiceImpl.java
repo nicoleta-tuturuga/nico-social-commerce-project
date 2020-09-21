@@ -2,6 +2,7 @@ package com.social.commerce.core.service.impl;
 
 import com.social.commerce.core.constants.AppConstants;
 import com.social.commerce.core.service.EmailService;
+import com.social.commerce.core.service.UserService;
 import com.social.commerce.facade.dto.EmailSendRequest;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,15 @@ public class ThymeleafEmailServiceImpl implements EmailService {
     private static final Logger LOGGER = Logger.getLogger(ThymeleafEmailServiceImpl.class);
     private JavaMailSender javaMailSender;
     private SpringTemplateEngine templateEngine;
+    private UserService userService;
 
     @Override
     public void sendMessage(EmailSendRequest emailSendRequest) {
+        if (!userService.isUserPresent(emailSendRequest.getTo())) {
+            LOGGER.debug(String.format("No user with email %s found!", emailSendRequest.getTo()));
+            return;
+        }
+
         Context context = new Context();
         context.setVariables(emailSendRequest.getVariables());
         try {
@@ -43,6 +50,11 @@ public class ThymeleafEmailServiceImpl implements EmailService {
         helper.setText(htmlBody, true);
         helper.addInline("footerLogo", new ClassPathResource(AppConstants.IMAGES_PATH + "footer.png"));
         javaMailSender.send(message);
+    }
+
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 
     @Autowired

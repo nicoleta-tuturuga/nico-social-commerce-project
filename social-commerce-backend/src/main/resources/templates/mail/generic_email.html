@@ -2,9 +2,9 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head></head>
 <body>
-<p>Dear,<span th:text="${recevier}"></span></p>
+<p><span th:text="#{email.introduction.formula}"></span> <span th:text="${receiver}"></span></p>
 <p th:text="${message}"></p>
-<p>Best regards, social commerce team!</p>
+<p th:text="#{email.ending.formula}"></p>
 <footer>
     <img src="cid:footerLogo"/>
 </footer>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{email.confirm.account.subject}"></title>
+</head>
+<body>
+<p><span th:text="#{email.introduction.formula}"></span><span th:text="${receiver}"></span></p>
+<p th:text="#{email.confirm.account.introduction.message}"></p>
+<p><span th:text="#{email.confirm.account.instructions}"></span><span th:text="${confirmAccountLink}"></span>
+<p>
+    <span th:text="#{email.confirm.account.token.availability}"></span> <span
+        th:text="${confirmAccountLinkLinkDueDate}"></span></p>
+</p>
+<p th:text="#{email.ending.formula}"></p>
+<footer>
+    <img src="cid:footerLogo"/>
+</footer>
+</body>
+</html>

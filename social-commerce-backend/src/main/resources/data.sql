@@ -13,3 +13,6 @@ insert into authentication_client(client_id, secret) values ('social-commerce-we
 insert into role(role) values('BUYER') ,
                              ('SELLER'),
                              ('ADMIN');
+
+insert into token_type(type) values ('PASSWORD_RESET'),
+                                    ('ACCOUNT_CONFIRM');
