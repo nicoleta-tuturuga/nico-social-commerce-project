@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from "./leftSidebar.css";
+import "./leftSidebar.css";
 
 const leftSidebar = (props) => {
 

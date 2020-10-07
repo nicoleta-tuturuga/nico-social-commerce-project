@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LeftSidebar from '../leftSidebar/leftSidebar';
-import PageFooter from '../SellerPage/PageFooter';
+import Footer from '../../navs/Footer/Footer';
 import ShopPage from './ShopPage';
 import PromotedShopPage from './PromotedShopPage';
 
@@ -87,7 +87,7 @@ const allShopsPage = () => {
           <ShopPage />
         </div>
 
-        <PageFooter />
+        <Footer />
 
       </div>
     </div>

@@ -1,0 +1,56 @@
+.seller-details-container {
+  margin-top: 96px;
+}
+
+.seller-image-container {
+  width: 50%;
+}
+
+.seller-image {
+  width: 100%;
+}
+
+.seller-details {
+  text-align: center;
+  width: 30%;
+  margin: 0 5rem;
+}
+
+.seller-logo {
+  width: 15rem;
+  height: 8rem;
+  margin-bottom: 2rem;
+}
+
+.seller-details > p {
+  max-height: 6rem;
+  overflow: hidden;
+}
+
+.seller-details > button {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid #222222;
+}
+
+.open-modal-container {
+  padding: 4rem;
+}
+
+.seller-tabs {
+  justify-content: flex-end;
+  border-bottom: 1px solid rgb(167, 167, 167);
+}
+
+.seller-tab {
+  list-style-type: none;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+}
+
+.active-tab {
+  border-left: 1px solid rgb(167, 167, 167);
+  border-right: 1px solid rgb(167, 167, 167);
+  border-top: 1px solid rgb(167, 167, 167);
+  border-bottom: 0;
+}
