@@ -66,3 +66,30 @@
 .seller-product-price {
   font-weight: 500;
 }
+
+.top-wraper-collection {
+  margin: 1rem 0;
+}
+
+.top-wraper-items-per-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showed-per-page {
+  width: 6rem;
+  margin: 0 0.2rem;
+}
+
+.top-wraper-sortby {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 0.3rem;
+}
+
+.client-option {
+  width: 6rem;
+  margin: 0 0.2rem;
+}
