@@ -11,7 +11,7 @@ const shopPage = () => {
   const shopsData = data.map((shopData) => {
     return (
       <div className="shop" key={shopData.id}>
-        <Link to="/sellerPage" className="shop-container">
+        <Link to={`/sellerPage/${shopData.id}`} className="shop-container">
           <div className="boutique-description-hover">
             <img className="boutique-img"
               src={shopData.imgPath} />

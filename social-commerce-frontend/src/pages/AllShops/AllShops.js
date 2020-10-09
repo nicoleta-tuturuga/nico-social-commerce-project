@@ -87,8 +87,6 @@ const allShopsPage = () => {
           <ShopPage />
         </div>
 
-        <Footer />
-
       </div>
     </div>
   );
