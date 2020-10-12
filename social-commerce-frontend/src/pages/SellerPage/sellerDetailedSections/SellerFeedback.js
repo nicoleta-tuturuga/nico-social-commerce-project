@@ -4,11 +4,11 @@ const feedback = () => {
 
   return(
     <div>
-      <p>Client's feedback</p>
-      <ul>
-        <li>Great</li>
-        <li>Average</li>
-        <li>Bad</li>
+      <p>Parerea clientilor</p>
+      <ul className="d-flex">
+        <li>Pozitiv</li>
+        <li>Mediu</li>
+        <li>Negativ</li>
       </ul>
     </div>
   )

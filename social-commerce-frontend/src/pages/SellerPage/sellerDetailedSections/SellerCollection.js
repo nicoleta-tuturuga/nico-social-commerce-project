@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './ProductDetails.css';
-import data from './data/seller-products-data.json';
+import './SellerCollection.css';
+import data from '../data/seller-products-data.json';
 
-import LeftSidebar from '../leftSidebar/leftSidebar';
+import LeftSidebar from '../../leftSidebar/leftSidebar';
 
 import { Link } from 'react-router-dom';
 
-const productDetails = () => {
+const sellerCollection = () => {
 
   const getSellerProductDetails = data.map((product) => {
     let sizesString = product.sizes.join(', ');
@@ -80,4 +80,4 @@ const productDetails = () => {
   );
 };
 
-export default productDetails;
+export default sellerCollection;

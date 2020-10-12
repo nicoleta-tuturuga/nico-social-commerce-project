@@ -11,9 +11,7 @@ import SellerPage from "./pages/SellerPage/SellerPage";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import SignIn from "./pages/LogIn/SignIn";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
-import LeftSidebar from "./pages/leftSidebar/leftSidebar";
 import AllShops from "./pages/AllShops/AllShops";
-import ProductDetails from "./pages/SellerPage/ProductDetails";
 
 import Navigation from "./navs/Navigation/Navigation";
 import Footer from "./navs/Footer/Footer";

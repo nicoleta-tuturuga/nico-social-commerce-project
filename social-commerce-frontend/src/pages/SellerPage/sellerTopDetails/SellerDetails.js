@@ -7,9 +7,7 @@ import data from '../data/seller-details-data.json';
 
 import SellerFeedback from '../sellerDetailedSections/SellerFeedback';
 import SellerBlog from '../sellerDetailedSections/SellerBlog';
-import ProductDetails from '../ProductDetails';
-import LeftSidebar from '../../leftSidebar/leftSidebar';
-
+import SellerCollection from '../sellerDetailedSections/SellerCollection';
 
 const collectionSection = 'collection';
 const feedbackSection = 'feedback';
@@ -40,7 +38,7 @@ class sellerDetails extends React.Component {
   
     let shownSectionBtn;
     if(this.state.activeSellerSection === "collection") {
-      shownSectionBtn = <ProductDetails/>
+      shownSectionBtn = <SellerCollection/>
     }
     if(this.state.activeSellerSection === "feedback") {
       shownSectionBtn = <SellerFeedback/>

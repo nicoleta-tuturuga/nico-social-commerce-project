@@ -1,7 +1,7 @@
 import React from 'react';
 
 import "./SellerPage.css";
-import LeftSidebar from '../leftSidebar/leftSidebar';
+
 import SellerPagePagination from './SellerPagePagination.js';
 import SellerDetails from './sellerTopDetails/SellerDetails';
 
