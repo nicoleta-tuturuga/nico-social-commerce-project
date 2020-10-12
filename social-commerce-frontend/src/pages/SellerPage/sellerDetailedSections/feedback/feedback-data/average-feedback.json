@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "productImg": "https://images.unsplash.com/photo-1551310355-b0cfa1572b5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+    "productName": "red dress",
+    "productId": "",
+    "clientComments": "Very very long shipping anf the postman was a nightmare, didn't want to bring the package to my door even if I paid for it.",
+    "feedbackLogoImg": "/assets/images/feedback-images/confused.png",
+    "clientName": "Maria Roberts",
+    "feedbackDate": "13.09.2020"
+  },
+  {
+    "id": "2",
+    "productImg": "https://images.unsplash.com/photo-1600223597884-2a5f4bcf5665?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+    "productName": "shoes",
+    "productId": "",
+    "clientComments": "Colors are a little different",
+    "feedbackLogoImg": "/assets/images/feedback-images/confused.png",
+    "clientName": "Rodrigo",
+    "feedbackDate": "14.01.2010"
+  },
+  {
+    "id": "3",
+    "productImg": "https://images.unsplash.com/photo-1597633243978-16912a0ee4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80",
+    "productName": "sandals and summer bag",
+    "productId": "",
+    "clientComments": "Slow shipping! The products were ok.",
+    "feedbackLogoImg": "/assets/images/feedback-images/confused.png",
+    "clientName": "Julia Roberta",
+    "feedbackDate": "07.08.2019"
+  }
+]

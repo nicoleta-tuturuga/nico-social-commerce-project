@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "productImg": "https://images.unsplash.com/photo-1601994972637-0ea711efa322?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=350&q=80",
+    "productName": "Hoodie",
+    "productId": "",
+    "clientComments": "The size is essentially bigger than described by the seller. very dissapointed",
+    "feedbackLogoImg": "/assets/images/feedback-images/bad-review.png",
+    "clientName": "Maria Roberts",
+    "feedbackDate": "13.09.2020"
+  },
+  {
+    "id": "2",
+    "productImg": "https://images.unsplash.com/photo-1602197165411-bcf986d773f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80",
+    "productName": "T-shirt",
+    "productId": "",
+    "clientComments": "Bad quality, the product had holes in it, I wouldn't have paid 1 leu for this very bad product.",
+    "feedbackLogoImg": "/assets/images/feedback-images/bad-review.png",
+    "clientName": "Rodrigo",
+    "feedbackDate": "14.01.2010"
+  }
+]
