@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './SellerFeedback.css';
+
 import PositiveFeedback from './feedback/PositiveFeedback';
 import AverageFeedback from './feedback/AverageFeedback';
 import NegativeFeedback from './feedback/NegativeFeedback';
@@ -41,16 +43,16 @@ class feedback extends React.Component {
 
     return (
       <div>
-        <p>Parerea clientilor</p>
-        <ul className="d-flex">
+        <h3 className="feedback-page-title">Parerea clientilor</h3>
+        <ul className="d-flex justify-content-center feedback-navigation">
           <li>
-            <button onClick={this.togglePositiveFeedback}>Pozitiv</button>
+            <button className="feedback-btn" onClick={this.togglePositiveFeedback}>Pozitiv</button>
           </li>
           <li>
-            <button onClick={this.toggleAverageFeedback}>Mediu</button>
+            <button className="feedback-btn" onClick={this.toggleAverageFeedback}>Mediu</button>
           </li>
           <li>
-            <button onClick={this.toggleNegativFeedback}>Negativ</button>
+            <button className="feedback-btn" onClick={this.toggleNegativFeedback}>Negativ</button>
           </li>
         </ul>
 

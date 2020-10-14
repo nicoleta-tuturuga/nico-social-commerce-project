@@ -80,7 +80,7 @@ class sellerDetails extends React.Component {
 
           <div>
             <ul className="seller-tabs d-flex">
-                <li className="seller-tab active-tab">
+                <li className="seller-tab active-tab"> 
                   <button onClick={this.handleCollectionSectionChange} className="tab-header">{sellerDetail.shopTabs.collection}</button>
                 </li>
                 <li className="seller-tab">

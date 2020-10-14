@@ -1,3 +1,8 @@
+.feedback-container {
+  padding: 1rem;
+  border-top: 1px solid rgb(189, 189, 189);
+}
+
 .feedback-img-container > img {
   width: 100%;
 }
@@ -5,3 +10,11 @@
 .feedback-img-logo {
   width: 1.5rem;
 }
+
+.feedback-product-name, 
+.feedback-client-name-title, 
+.feedback-date {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+

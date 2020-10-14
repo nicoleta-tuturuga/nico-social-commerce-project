@@ -54,3 +54,8 @@
   border-top: 1px solid rgb(167, 167, 167);
   border-bottom: 0;
 }
+
+.seller-tab > button {
+  background-color: transparent;
+  border: none;
+}
