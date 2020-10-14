@@ -18,3 +18,30 @@
   font-weight: 600;
 }
 
+.no-feedback-default-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 2rem 0;
+  border-top: 1px solid rgb(189, 189, 189);
+}
+
+.add-client-feedback {
+  padding: 3rem 0;
+  border-top: 1px solid rgb(189, 189, 189);
+}
+
+.add-client-feedback > p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.add-client-feedback > button {
+  width: 7rem;
+  height: 7rem;
+  background-color: transparent;
+  border: none;
+}
+
+.add-client-feedback img {
+  width: 100%;
+}

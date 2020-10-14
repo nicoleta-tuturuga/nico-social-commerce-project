@@ -6,7 +6,9 @@ import './CommonFeedbackStyle.css';
 
 const positiveFeedback = () => {
 
-  const getPositiveFeedbackData = data.map((positiveData) => {
+  let showPositiveFeedback;
+
+  let getPositiveFeedbackData = data.map((positiveData) => {
     return (
       <div className="d-flex feedback-container">
         <div className="col-md-2 feedback-img-container d-flex align-items-center">
@@ -31,10 +33,26 @@ const positiveFeedback = () => {
     )
   })
 
+  if (data.length === 0) {
+    showPositiveFeedback =
+      <div className="no-feedback-default-message d-flex justify-content-center">
+        <p>Momentan, nu exista nicio recenzie la aceasta categorie.</p>
+      </div>
+  } else {
+    showPositiveFeedback = getPositiveFeedbackData;
+  }
+
 
   return (
     <div>
-      {getPositiveFeedbackData}
+      {showPositiveFeedback}
+
+      <div className="add-client-feedback d-flex flex-column align-items-center">
+        <p>Hi ..clientule.., adauga o recenzie pentru ultimul produs achizitionat.</p>
+        <button>
+          <img src="/assets/images/feedback-images/add.png"></img>
+        </button>
+      </div>
     </div>
   )
 }

@@ -6,7 +6,9 @@ import './CommonFeedbackStyle.css';
 
 const averageFeedback = () => {
 
-  const getAverageFeedbackData = data.map((averageFeedbackData) => {
+  let showAverageFeedback;
+
+  let getAverageFeedbackData = data.map((averageFeedbackData) => {
     return (
       <div className="d-flex feedback-container">
         <div className="col-md-2 feedback-img-container d-flex align-items-center">
@@ -31,9 +33,18 @@ const averageFeedback = () => {
     )
   })
 
-  return(
+  if (data.length === 0) {
+    showAverageFeedback =
+      <div className="no-feedback-default-message d-flex justify-content-center">
+        <p>Momentan, nu exista nicio recenzie la aceasta categorie.</p>
+      </div>
+  } else {
+    showAverageFeedback = getAverageFeedbackData;
+  }
+
+  return (
     <div>
-      {getAverageFeedbackData}
+      {showAverageFeedback}
     </div>
   )
 }
