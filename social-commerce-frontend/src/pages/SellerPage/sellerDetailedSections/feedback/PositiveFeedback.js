@@ -4,6 +4,8 @@ import data from './feedback-data/positive-feedback.json';
 
 import './CommonFeedbackStyle.css';
 
+import AddFeedback from './AddFeedback';
+
 const positiveFeedback = () => {
 
   let showPositiveFeedback;
@@ -47,11 +49,8 @@ const positiveFeedback = () => {
     <div>
       {showPositiveFeedback}
 
-      <div className="add-client-feedback d-flex flex-column align-items-center">
-        <p>Hi ..clientule.., adauga o recenzie pentru ultimul produs achizitionat.</p>
-        <button>
-          <img src="/assets/images/feedback-images/add.png"></img>
-        </button>
+      <div>
+        <AddFeedback/>
       </div>
     </div>
   )

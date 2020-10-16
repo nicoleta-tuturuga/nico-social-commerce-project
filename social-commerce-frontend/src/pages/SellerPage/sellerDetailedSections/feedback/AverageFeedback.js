@@ -4,6 +4,9 @@ import data from './feedback-data/average-feedback.json';
 
 import './CommonFeedbackStyle.css';
 
+import AddFeedback from './AddFeedback';
+
+
 const averageFeedback = () => {
 
   let showAverageFeedback;
@@ -45,6 +48,10 @@ const averageFeedback = () => {
   return (
     <div>
       {showAverageFeedback}
+
+      <div>
+        <AddFeedback />
+      </div>
     </div>
   )
 }
