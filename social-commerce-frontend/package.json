@@ -15,8 +15,8 @@
     "react-dropdown": "^1.6.4",
     "react-dropdown-select": "^3.0.0",
     "react-multistep": "^3.6.6",
-    "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.0.0",
     "react-step-progress-bar": "^1.0.3"
   },
