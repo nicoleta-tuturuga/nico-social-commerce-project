@@ -99,6 +99,8 @@ class sellerDetails extends React.Component {
       <div className="">
         {sellerDetailsData}
         {shownSectionBtn}
+
+        hiiiiiiiiii {this.props.match.params.shopId}
       </div>
     )
   }
