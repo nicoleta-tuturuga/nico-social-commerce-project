@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/socialCommerce?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/socialCommerce?createDatabaseIfNotExist=true&serverTimezone=UTC
     username: root
     password: Root1234!
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -45,3 +45,5 @@ app:
     passwordValidityTimeInDays: 60
     tokenValidityTimeInMinutes: 60
     resetTokenValidityTimeInDays: 14
+  frontendClient:
+    host: http://localhost:3000

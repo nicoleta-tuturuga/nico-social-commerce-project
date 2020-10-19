@@ -18,27 +18,26 @@ import java.util.Optional;
 @Service
 public class TokenServiceImpl implements TokenService {
 
-    private static final String TOKEN_NOT_FOUND_ERROR_MESSAGE_FORMAT = "No token %s found in %s tokens!";
+    private static final String TOKEN_NOT_FOUND_ERROR_MESSAGE_FORMAT = "No token %s found!";
     private static final String TOKEN_TYPE_NOT_FOUND_ERROR_MESSAGE_FORMAT = "No token type %s found!";
+
     private TokenDAO tokenDAO;
     private TokenTypeDAO tokenTypeDAO;
     private UserService userService;
 
     @Override
-    public Token getToken(String token, TokenTypes tokenType) {
-        return tokenDAO.findTokenByValueAndTokenTypeType(token, tokenType)
-                .orElseThrow(() -> new TokenNotFoundException(
-                        String.format(TOKEN_NOT_FOUND_ERROR_MESSAGE_FORMAT, token, tokenType)));
+    public Optional<Token> getToken(String tokenValue) {
+        return tokenDAO.findTokenByValue(tokenValue);
+    }
+
+    @Override
+    public Optional<Token> getToken(String token, TokenTypes tokenType) {
+        return tokenDAO.findTokenByValueAndTokenTypeType(token, tokenType);
     }
 
     @Override
     public Optional<Token> getTokenForUser(String userEmail, TokenTypes tokenType) {
         return tokenDAO.findTokenByUserEmailAndTokenTypeType(userEmail, tokenType);
-    }
-
-    @Override
-    public String getTokenValue(String token, TokenTypes tokenType) {
-        return getToken(token, tokenType).getValue();
     }
 
     @Override
@@ -57,9 +56,13 @@ public class TokenServiceImpl implements TokenService {
     }
 
     @Override
-    public boolean isTokenExpired(String token, TokenTypes tokenType) {
-        return getToken(token, tokenType)
-                .getExpirationDateTime().isAfter(LocalDateTime.now());
+    public void markTokenAsUsed(String tokenValue) {
+        Token token = getToken(tokenValue).orElseThrow(() -> new TokenNotFoundException(String.format(
+                TOKEN_NOT_FOUND_ERROR_MESSAGE_FORMAT, tokenValue)));
+
+        token.setUsed(true);
+
+        tokenDAO.save(token);
     }
 
     @Autowired

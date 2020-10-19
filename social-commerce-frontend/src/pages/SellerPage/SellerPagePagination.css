@@ -1,0 +1,32 @@
+.page-notation-container {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  display: flex;
+  font-size: 1rem;
+  border-top: 1px solid rgb(167, 167, 167);
+}
+
+.page-notation-container button {
+  color: black;
+  background-color: transparent;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.page-notation-details {
+  display: flex;
+  align-items: center;
+}
+
+.page-number {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  border: none;
+  padding: 0.4rem 0.8rem;
+}
+
+.current-page {
+  border: 1px solid rgb(175, 175, 175);
+}

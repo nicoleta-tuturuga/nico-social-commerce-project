@@ -1,0 +1,11 @@
+[{
+  "id": "1",
+  "imgPath": "/assets/images/homepage/4.jpeg",
+  "logo": "https://images.unsplash.com/photo-1521834100799-d805ca040e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+  "shopDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "shopTabs": {
+    "collection": "Collection",
+    "feedback": "Feedback",
+    "blog": "Blog"
+  }
+}]

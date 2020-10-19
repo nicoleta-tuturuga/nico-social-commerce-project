@@ -39,53 +39,54 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        
-          <Navigation />
-  <div className="container-fluid">
-    
-  <div className="row">
 
-{/* comment tempoarely the left column */}
-  <div className="col-md-1  center">
-      {/* <h3>Left column</h3> */}
+        <Navigation />
+        <div className="container-fluid">
 
-  </div> 
+          <div className="row">
 
-    <div className="col-md-10 center">
-    <Switch>
-            <Route path="/" component={HomePage} exact />
-            <Route path="/about" component={About} />
-            <Route path="/newsfeed" component={NewsfeedPage} />
-            <Route path="/home" component={HomePage} />
-            <Route path="/sellerPage" component ={SellerPage} />
-            <Route path="/productPage" component ={ProductPage} />
-            <Route path="/logIn" component ={SignIn} />
-            <Route path="/shoppingCart" component={ShoppingCart}/>
-            <Route path="/allShopsPage" component={AllShops}/>
+            {/* comment temporarely the left column */}
+            <div className="col-md-1  center">
+              {/* <h3>Left column</h3> */}
 
-                        {/* <Route path="/contact" component={Contact} /> */}
-            {/* <Route component={Error} /> */}
-          </Switch>    
-    </div>
+            </div>
 
-    <div className="col-md-1">
-      
-      {/* <h4>Top countries:</h4>
-      <ul className="list-group list-group-flush">     
-        <li className="list-group-item">AAAAAA</li>    
-        <li className="list-group-item">AAAAAA</li>    
-        <li className="list-group-item">AAAAAA</li>
-      </ul> */}
-    </div>
-      <FontAwesomeIcon />
-    
-    </div>
-  </div>
-  
-      <Footer />
-      
+            <div className="col-md-10 center">
+              <Switch>
+                <Route path="/" component={HomePage} exact />
+                <Route path="/about" component={About} />
+                <Route path="/newsfeed" component={NewsfeedPage} />
+                <Route path="/home" component={HomePage} />
+                <Route path="/sellerPage" component={SellerPage} />
+                <Route path="/productPage" component={ProductPage} />
+                <Route path="/logIn" component={SignIn} />
+                <Route path="/shoppingCart" component={ShoppingCart} />
+                <Route path="/allShopsPage" component={AllShops} />
+
+                {/* <Route path="/contact" component={Contact} /> */}
+                {/* <Route component={Error} /> */}
+              </Switch>
+            </div>
+
+            <div className="col-md-1">
+
+              {/* <h4>Top countries:</h4>
+                <ul className="list-group list-group-flush">     
+                <li className="list-group-item">AAAAAA</li>    
+                <li className="list-group-item">AAAAAA</li>    
+                <li className="list-group-item">AAAAAA</li>
+              </ul> */}
+            </div>
+
+            <FontAwesomeIcon />
+
+          </div>
+        </div>
+
+        <Footer />
+
       </BrowserRouter>
-      
+
     );
   }
 };

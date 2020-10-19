@@ -22,6 +22,9 @@ public class Token {
     @Column
     private LocalDateTime expirationDateTime;
 
+    @Column
+    private boolean used;
+
     @ManyToOne
     @JoinColumn(name = "tokenTypeId")
     private TokenType tokenType;
