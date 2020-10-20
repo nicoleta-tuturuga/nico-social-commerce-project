@@ -1,5 +1,6 @@
 package com.social.commerce;
 
+import com.social.commerce.config.StaticResourceConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

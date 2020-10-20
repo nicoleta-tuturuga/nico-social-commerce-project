@@ -1,4 +1,4 @@
-package com.social.commerce;
+package com.social.commerce.config;
 
 import com.social.commerce.facade.dto.EmailSendRequest;
 import org.springframework.context.annotation.Bean;

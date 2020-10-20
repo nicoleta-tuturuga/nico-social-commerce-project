@@ -1,4 +1,4 @@
-package com.social.commerce;
+package com.social.commerce.config;
 
 import com.social.commerce.core.constants.AppConstants;
 import org.springframework.boot.context.properties.ConfigurationProperties;

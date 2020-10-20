@@ -1,4 +1,4 @@
-package com.social.commerce;
+package com.social.commerce.config;
 
 import com.social.commerce.core.filter.JwtAuthenticationFilter;
 import com.social.commerce.core.service.impl.UserDetailsServiceImpl;
