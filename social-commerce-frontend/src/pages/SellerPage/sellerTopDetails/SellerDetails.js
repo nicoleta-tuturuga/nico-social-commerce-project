@@ -6,7 +6,7 @@ import './SellerDetails.css';
 import data from '../data/seller-details-data.json';
 
 import SellerFeedback from '../sellerDetailedSections/SellerFeedback';
-import SellerBlog from '../sellerDetailedSections/SellerBlog';
+import SellerBlogPostsList from '../sellerDetailedSections/SellerBlogPostsList';
 import SellerCollection from '../sellerDetailedSections/SellerCollection';
 
 const collectionSection = 'collection';
@@ -44,7 +44,7 @@ class sellerDetails extends React.Component {
       shownSectionBtn = <SellerFeedback/>
     }
     if(this.state.activeSellerSection === "blog") {
-      shownSectionBtn = <SellerBlog/>
+      shownSectionBtn = <SellerBlogPostsList />
     }
 
     const sellerDetailsData = data.map((sellerDetail) => {

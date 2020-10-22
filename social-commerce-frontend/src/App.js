@@ -12,6 +12,7 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 import SignIn from "./pages/LogIn/SignIn";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import AllShops from "./pages/AllShops/AllShops";
+import SellerBlogRoute from './pages/SellerPage/sellerDetailedSections/blog/SellerBlogRoute';
 
 import Navigation from "./navs/Navigation/Navigation";
 import Footer from "./navs/Footer/Footer";
@@ -61,6 +62,7 @@ class App extends Component {
                 <Route path="/logIn" component={SignIn} />
                 <Route path="/shoppingCart" component={ShoppingCart} />
                 <Route path="/allShopsPage" component={AllShops} />
+                <Route path="/sellerBlogPost" component={SellerBlogRoute} />
 
                 {/* <Route path="/contact" component={Contact} /> */}
                 {/* <Route component={Error} /> */}
