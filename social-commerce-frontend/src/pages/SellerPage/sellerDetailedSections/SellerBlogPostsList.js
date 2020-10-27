@@ -18,10 +18,10 @@ const BlogPost = () => {
         </div>
         <p className="blog-post-description">{blogPost.description}</p>
 
-        <Link to={`/sellerBlogPost/${blogPost.id}`}>
+        <Link to={`/sellerBlogPost/${blogPost.id}`} className="align-self-end">
           <button className="read-blog-post-btn">
             Citeste postarea...
-        </button>
+          </button>
         </Link>
       </div>
     )
