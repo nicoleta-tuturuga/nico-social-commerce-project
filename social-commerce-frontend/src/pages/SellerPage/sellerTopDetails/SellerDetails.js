@@ -70,7 +70,7 @@ class sellerDetails extends React.Component {
 
           <div>
             <ul className="seller-tabs d-flex">
-              <li className="seller-tab active-tab">
+              <li className="seller-tab">
                 <Link to={`/sellerPage/${this.props.match.params.shopId}/?section=collection`}>
                   <button className="tab-header">{sellerDetail.shopTabs.collection}</button>
                 </Link>
