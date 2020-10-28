@@ -2,6 +2,8 @@ import React from 'react';
 
 import SellerDetailsModal from './SellerDetailsModal';
 
+import { Link } from 'react-router-dom';
+import queryString from 'query-string';
 import './SellerDetails.css';
 import data from '../data/seller-details-data.json';
 
@@ -9,42 +11,30 @@ import SellerFeedback from '../sellerDetailedSections/SellerFeedback';
 import SellerBlogPostsList from '../sellerDetailedSections/SellerBlogPostsList';
 import SellerCollection from '../sellerDetailedSections/SellerCollection';
 
-const collectionSection = 'collection';
-const feedbackSection = 'feedback';
-const blogSection = 'blog';
 
 class sellerDetails extends React.Component {
 
-
   state = {
     showModal: false,
-    activeSellerSection: 'collection'
   }
 
-  handleCollectionSectionChange = () => {
-    this.setState({activeSellerSection: collectionSection});
-  }
-
-  handleFeedbackSectionChange = () => {
-    this.setState({activeSellerSection: feedbackSection});
-  }
-
-  handleBlogSectionChange = () => {
-    this.setState({activeSellerSection: blogSection});
-  }
-  
-  
   render() {
-  
+
+    const queryParam = queryString.parse(this.props.location.search);
+
+    let queryParamSection = queryParam.section ? queryParam.section : "collection";
+
     let shownSectionBtn;
-    if(this.state.activeSellerSection === "collection") {
-      shownSectionBtn = <SellerCollection/>
+    if (queryParamSection === "collection") {
+      shownSectionBtn = <SellerCollection />
     }
-    if(this.state.activeSellerSection === "feedback") {
-      shownSectionBtn = <SellerFeedback/>
+    else if (queryParamSection === "feedback") {
+      shownSectionBtn = <SellerFeedback />
     }
-    if(this.state.activeSellerSection === "blog") {
+    else if (queryParamSection === "blog") {
       shownSectionBtn = <SellerBlogPostsList />
+    } else {
+      shownSectionBtn = <h2 className="d-flex justify-content-center">There is no page available for you search</h2>
     }
 
     const sellerDetailsData = data.map((sellerDetail) => {
@@ -80,20 +70,28 @@ class sellerDetails extends React.Component {
 
           <div>
             <ul className="seller-tabs d-flex">
-                <li className="seller-tab active-tab"> 
-                  <button onClick={this.handleCollectionSectionChange} className="tab-header">{sellerDetail.shopTabs.collection}</button>
-                </li>
-                <li className="seller-tab">
-                  <button onClick={this.handleFeedbackSectionChange} className="tab-header">{sellerDetail.shopTabs.feedback}</button>
-                </li>
+              <li className="seller-tab active-tab">
+                <Link to={`/sellerPage/${this.props.match.params.shopId}/?section=collection`}>
+                  <button className="tab-header">{sellerDetail.shopTabs.collection}</button>
+                </Link>
+              </li>
               <li className="seller-tab">
-                <button onClick={this.handleBlogSectionChange} className="tab-header">{sellerDetail.shopTabs.blog}</button>
+                <Link to={`/sellerPage/${this.props.match.params.shopId}/?section=feedback`}>
+                  <button className="tab-header">{sellerDetail.shopTabs.feedback}</button>
+                </Link>
+              </li>
+              <li className="seller-tab">
+                <Link to={`/sellerPage/${this.props.match.params.shopId}/?section=blog`}>
+                  <button className="tab-header">{sellerDetail.shopTabs.blog}</button>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       )
     })
+
+    console.log("params: ", queryParamSection.section)
 
     return (
       <div className="">
