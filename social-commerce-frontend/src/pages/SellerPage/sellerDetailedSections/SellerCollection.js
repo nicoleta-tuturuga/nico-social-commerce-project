@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const sellerCollection = () => {
 
-  const getSellerProductDetails = data.map((product) => {
+  const sellerProducts = data.map((product) => {
     let sizesString = product.sizes.join(', ');
 
     return (
@@ -73,7 +73,7 @@ const sellerCollection = () => {
         </div>
 
         <div className="d-flex flex-wrap justify-content-between">
-          {getSellerProductDetails}
+          {sellerProducts}
         </div>
       </div>
     </div>

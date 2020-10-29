@@ -91,14 +91,10 @@ class sellerDetails extends React.Component {
       )
     })
 
-    console.log("params: ", queryParamSection.section)
-
     return (
       <div className="">
         {sellerDetailsData}
         {shownSectionBtn}
-
-        hiiiiiiiiii {this.props.match.params.shopId}
       </div>
     )
   }

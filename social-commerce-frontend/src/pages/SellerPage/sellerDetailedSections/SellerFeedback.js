@@ -13,32 +13,32 @@ const negativeFeedback = 'negative';
 class feedback extends React.Component {
 
   state = {
-    activeFeedback: 'positive'
+    showActiveFeedback: 'positive'
   }
 
   togglePositiveFeedback = () => {
-    this.setState({activeFeedback: positiveFeedback});
+    this.setState({showActiveFeedback: positiveFeedback});
   }
 
   toggleAverageFeedback = () => {
-    this.setState({activeFeedback: averageFeedback});
+    this.setState({showActiveFeedback: averageFeedback});
   }
 
   toggleNegativFeedback = () => {
-    this.setState({activeFeedback: negativeFeedback});
+    this.setState({showActiveFeedback: negativeFeedback});
   }
 
   render(){
 
-    let showActiveFeedback;
-    if(this.state.activeFeedback === positiveFeedback) {
-      showActiveFeedback = <PositiveFeedback />;
+    let activeFeedback;
+    if(this.state.showActiveFeedback === positiveFeedback) {
+      activeFeedback = <PositiveFeedback />;
     }
-    if(this.state.activeFeedback === averageFeedback) {
-      showActiveFeedback = <AverageFeedback />;
+    if(this.state.showActiveFeedback === averageFeedback) {
+      activeFeedback = <AverageFeedback />;
     }
-    if(this.state.activeFeedback === negativeFeedback) {
-      showActiveFeedback = <NegativeFeedback />;
+    if(this.state.showActiveFeedback === negativeFeedback) {
+      activeFeedback = <NegativeFeedback />;
     }
 
     return (
@@ -57,7 +57,7 @@ class feedback extends React.Component {
         </ul>
 
         <div>
-          {showActiveFeedback}
+          {activeFeedback}
         </div>
        
       </div>
