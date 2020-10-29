@@ -22,12 +22,12 @@
   margin-bottom: 2rem;
 }
 
-.seller-details > p {
+.seller-details>p {
   max-height: 6rem;
   overflow: hidden;
 }
 
-.seller-details > button {
+.seller-details>button {
   padding: 0.5rem 1rem;
   background-color: transparent;
   border: 1px solid #222222;
@@ -45,17 +45,11 @@
 
 .seller-tab {
   list-style-type: none;
-  padding: 0.5rem;
   margin-right: 0.2rem;
   border-left: 1px solid rgb(167, 167, 167);
   border-right: 1px solid rgb(167, 167, 167);
   border-top: 1px solid rgb(167, 167, 167);
   border-bottom: 0;
-}
-
-.seller-tab:hover {
-  background-color: rgb(32, 32, 32);
-  color: #ffffff;
 }
 
 .seller-tab button {
@@ -64,5 +58,11 @@
   color: #6e6969;
   font-size: 1.1rem;
   font-weight: 600;
+  padding: 0.5rem;
 }
 
+.seller-details>button:hover ,
+.seller-tab button:hover {
+  background-color: rgb(32, 32, 32);
+  color: #ffffff;
+}
