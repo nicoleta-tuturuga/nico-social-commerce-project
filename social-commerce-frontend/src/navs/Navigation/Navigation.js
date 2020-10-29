@@ -24,7 +24,7 @@ const Navigation = () => {
 
           <div className="session-menu d-flex">
             <li>
-              <Link to="/logIn">
+              <Link to="/logInPage">
                 <button>Autentificare</button>
               </Link>
             </li>
@@ -71,7 +71,7 @@ const Navigation = () => {
               </ul>
 
               <ul className="navbar-nav">
-                <NavLink activeClassName='is-active' className="white-border" to="/newsfeed">
+                <NavLink activeClassName='is-active' className="white-border" to="/newsfeedPage">
                   <li className="nav-item">
                     <button>NOUTATI</button>
                   </li>

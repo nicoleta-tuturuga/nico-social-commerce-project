@@ -2,16 +2,40 @@ import React from 'react';
 
 import SellerDetailsModal from './SellerDetailsModal';
 
+import { Link } from 'react-router-dom';
+import queryString from 'query-string';
 import './SellerDetails.css';
 import data from '../data/seller-details-data.json';
+
+import SellerFeedback from '../sellerDetailedSections/SellerFeedback';
+import SellerBlogPostsList from '../sellerDetailedSections/SellerBlogPostsList';
+import SellerCollection from '../sellerDetailedSections/SellerCollection';
+
 
 class sellerDetails extends React.Component {
 
   state = {
-    showModal: false
+    showModal: false,
   }
 
   render() {
+
+    const queryParam = queryString.parse(this.props.location.search);
+
+    let queryParamSection = queryParam.section ? queryParam.section : "collection";
+
+    let shownSectionBtn;
+    if (queryParamSection === "collection") {
+      shownSectionBtn = <SellerCollection />
+    }
+    else if (queryParamSection === "feedback") {
+      shownSectionBtn = <SellerFeedback />
+    }
+    else if (queryParamSection === "blog") {
+      shownSectionBtn = <SellerBlogPostsList />
+    } else {
+      shownSectionBtn = <h2 className="d-flex justify-content-center">There is no page available for you search</h2>
+    }
 
     const sellerDetailsData = data.map((sellerDetail) => {
       return (
@@ -30,7 +54,7 @@ class sellerDetails extends React.Component {
                 View more...
                 </button>
             </div>
-            
+
             <SellerDetailsModal
               show={this.state.showModal}
               handleClose={() => this.setState({ showModal: false })}>
@@ -46,17 +70,20 @@ class sellerDetails extends React.Component {
 
           <div>
             <ul className="seller-tabs d-flex">
-              <li className="seller-tab active-tab">
-                <a href="#"></a>
-                <span className="tab-header">{sellerDetail.shopTabs.collection}</span>
+              <li className="seller-tab">
+                <Link to={`/sellerPage/${this.props.match.params.shopId}/?section=collection`}>
+                  <button className="tab-header">{sellerDetail.shopTabs.collection}</button>
+                </Link>
               </li>
               <li className="seller-tab">
-                <a href="#"></a>
-                <span className="tab-header">{sellerDetail.shopTabs.feedback}</span>
+                <Link to={`/sellerPage/${this.props.match.params.shopId}/?section=feedback`}>
+                  <button className="tab-header">{sellerDetail.shopTabs.feedback}</button>
+                </Link>
               </li>
               <li className="seller-tab">
-                <a href="#"></a>
-                <span className="tab-header">{sellerDetail.shopTabs.blog}</span>
+                <Link to={`/sellerPage/${this.props.match.params.shopId}/?section=blog`}>
+                  <button className="tab-header">{sellerDetail.shopTabs.blog}</button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -65,8 +92,9 @@ class sellerDetails extends React.Component {
     })
 
     return (
-      <div className="container">
+      <div className="">
         {sellerDetailsData}
+        {shownSectionBtn}
       </div>
     )
   }

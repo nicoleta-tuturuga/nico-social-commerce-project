@@ -1,0 +1,68 @@
+.feedback-container {
+  padding: 1rem;
+  border-top: 1px solid rgb(189, 189, 189);
+}
+
+.feedback-img-container > img {
+  width: 100%;
+}
+
+.feedback-img-logo {
+  width: 1.5rem;
+}
+
+.feedback-product-name, 
+.feedback-client-name-title, 
+.feedback-date {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.no-feedback-default-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 2rem 0;
+  border-top: 1px solid rgb(189, 189, 189);
+}
+
+.add-client-feedback {
+  padding: 3rem 0;
+  border-top: 1px solid rgb(189, 189, 189);
+}
+
+.add-client-feedback > p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.add-client-feedback > button {
+  width: 7rem;
+  height: 7rem;
+  background-color: transparent;
+  border: none;
+}
+
+.add-client-feedback img {
+  width: 100%;
+}
+
+.add-feedback-modal {
+  padding: 5rem;
+  min-height: 28rem;
+}
+
+.add-feedback-modal-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.add-feedback-modal-description {
+  width: 100%;
+  min-height: 7rem;
+}
+
+.add-feedback-modal-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+}

@@ -10,8 +10,8 @@ const promotedShopPage = () => {
 
   const promotedShops = data.map((promotedShopData) => {
     return (
-      <div className="promoted-shops">
-        <Link to="/sellerPage" className="shop-container">
+      <div className="promoted-shops" key={promotedShopData.id}>
+        <Link to={`/sellerPage/${promotedShopData.id}`} className="shop-container">
           <div className="boutique-description-hover">
             <img className="boutique-img"
               src={promotedShopData.imgPath} />

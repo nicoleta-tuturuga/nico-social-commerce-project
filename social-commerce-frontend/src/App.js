@@ -11,8 +11,8 @@ import SellerPage from "./pages/SellerPage/SellerPage";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import SignIn from "./pages/LogIn/SignIn";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
-import LeftSidebar from "./pages/leftSidebar/leftSidebar";
 import AllShops from "./pages/AllShops/AllShops";
+import SellerBlogRoute from './pages/SellerPage/sellerDetailedSections/blog/SellerBlogRoute';
 
 import Navigation from "./navs/Navigation/Navigation";
 import Footer from "./navs/Footer/Footer";
@@ -54,14 +54,15 @@ class App extends Component {
             <div className="col-md-10 center">
               <Switch>
                 <Route path="/" component={HomePage} exact />
-                <Route path="/about" component={About} />
-                <Route path="/newsfeed" component={NewsfeedPage} />
-                <Route path="/home" component={HomePage} />
+                <Route path="/aboutUsPage" component={About} />
+                <Route path="/newsfeedPage" component={NewsfeedPage} />
+                <Route path="/homePage" component={HomePage} />
                 <Route path="/sellerPage" component={SellerPage} />
                 <Route path="/productPage" component={ProductPage} />
-                <Route path="/logIn" component={SignIn} />
-                <Route path="/shoppingCart" component={ShoppingCart} />
+                <Route path="/logInPage" component={SignIn} />
+                <Route path="/shoppingCartPage" component={ShoppingCart} />
                 <Route path="/allShopsPage" component={AllShops} />
+                <Route path="/sellerPostPage" component={SellerBlogRoute} />
 
                 {/* <Route path="/contact" component={Contact} /> */}
                 {/* <Route component={Error} /> */}

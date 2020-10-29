@@ -1,0 +1,46 @@
+.blog-post-page-container {
+  padding-top: 4rem;
+}
+
+.blog-post-page-title{
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.blog-page-btns-container {
+  margin: 2rem 0;
+}
+
+.blog-page-btns-container button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.blog-page-btns-icons {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.3rem;
+}
+
+.blog-like-btn {
+  background-color: rgb(153, 153, 221);
+}
+
+.blog-share-on-facebook-btn {
+  background-color: rgb(78, 78, 161);
+}
+
+.blog-share-on-instagram-btn {
+  background-color: rgb(255, 188, 230);
+}
+
+.blog-save-post-btn {
+  background-color: rgb(48, 47, 47);
+}

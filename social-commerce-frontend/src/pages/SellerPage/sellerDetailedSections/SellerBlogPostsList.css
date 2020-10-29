@@ -1,0 +1,31 @@
+.blog-post-container {
+  border-bottom: 1px solid rgb(189, 189, 189);
+  padding: 2rem;
+}
+
+.blog-post-title {
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.blog-post-date {
+  font-style: italic;
+}
+
+.blog-post-img-container img {
+  width: 50%;
+}
+
+.blog-post-description {
+  max-height: 6rem;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.read-blog-post-btn {
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}

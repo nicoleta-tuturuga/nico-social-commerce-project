@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "productImg": "https://images.unsplash.com/photo-1601762319935-963f5b1869ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=665&q=80",
+    "productName": "trench oversized",
+    "productId": "",
+    "clientComments": "Lovely shirt, great services, very responsive seller, always announcing about the status of the shipping. Great cality of the product and the colors are just like in the pictures. I will definitely buy from her in the future :).",
+    "feedbackLogoImg": "/assets/images/feedback-images/emoticon.png",
+    "clientName": "Maria Roberts",
+    "feedbackDate": "13.09.2020"
+  },
+  {
+    "id": "2",
+    "productImg": "https://images.unsplash.com/photo-1600181516264-3ea807ff44b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+    "productName": "shoes",
+    "productId": "",
+    "clientComments": "Lovely!!!",
+    "feedbackLogoImg": "/assets/images/feedback-images/emoticon.png",
+    "clientName": "Rodrigo",
+    "feedbackDate": "14.01.2010"
+  },
+  {
+    "id": "3",
+    "productImg": "https://images.unsplash.com/photo-1578483570097-eb36f3b58fc0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+    "productName": "shirt",
+    "productId": "",
+    "clientComments": "Amazing product, the details are perfect, absolutely love it. Very seriouse seller!",
+    "feedbackLogoImg": "/assets/images/feedback-images/emoticon.png",
+    "clientName": "Julia Roberta",
+    "feedbackDate": "07.08.2019"
+  }
+]
